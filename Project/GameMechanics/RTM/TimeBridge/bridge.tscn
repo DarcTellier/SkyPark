@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://cns2gg8y7rotr"]
+
+[ext_resource type="Script" uid="uid://dpnjp3wo5k7av" path="res://GameMechanics/RTM/TimeBridge/bridge.gd" id="1_lf4fy"]
+[ext_resource type="Texture2D" uid="uid://c6fywfjuqwdh7" path="res://Assets/Art/Bridge.png" id="2_yb2vv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2be5"]
+size = Vector2(112, 16)
+
+[node name="Bridge" type="Node2D"]
+script = ExtResource("1_lf4fy")
+schedule_windows = Array[Dictionary]([{
+"close": {
+"hour": 16,
+"minute": 44,
+"second": 0
+},
+"open": {
+"hour": 16,
+"minute": 41,
+"second": 0
+}
+}])
+
+[node name="LeftBridge" type="Node2D" parent="."]
+position = Vector2(0, 8)
+rotation = -1.5708
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LeftBridge"]
+position = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBridge/StaticBody2D"]
+position = Vector2(56, 8)
+shape = SubResource("RectangleShape2D_s2be5")
+
+[node name="Bridge" type="Sprite2D" parent="LeftBridge"]
+texture_filter = 1
+position = Vector2(56, -8)
+texture = ExtResource("2_yb2vv")
+
+[node name="RightBridge" type="Node2D" parent="."]
+position = Vector2(224, 8)
+rotation = 1.5708
+scale = Vector2(-1, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RightBridge"]
+position = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightBridge/StaticBody2D"]
+position = Vector2(56, 8)
+shape = SubResource("RectangleShape2D_s2be5")
+
+[node name="Bridge2" type="Sprite2D" parent="RightBridge"]
+texture_filter = 1
+position = Vector2(56, -8)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("2_yb2vv")

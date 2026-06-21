@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdpb0byg62j6a"]
+
+[ext_resource type="Script" uid="uid://bmd1huovmcsuu" path="res://GameMechanics/Doors/door.gd" id="1_ba8gm"]
+[ext_resource type="Texture2D" uid="uid://cbt1ewsvpstav" path="res://Assets/Art/LockedDoor.png" id="2_v6xrn"]
+[ext_resource type="Script" uid="uid://c6mk34lvqumnh" path="res://GameMechanics/Doors/locked_door.gd" id="3_50cdl"]
+[ext_resource type="PackedScene" uid="uid://8eeb0x7kjhqf" path="res://interactions/interaction area/interaction_area.tscn" id="4_y5njw"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_v6xrn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0phs7"]
+size = Vector2(16, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xadh"]
+size = Vector2(20, 31)
+
+[node name="Door" type="Node2D"]
+z_index = -2
+scale = Vector2(2, 2)
+script = ExtResource("1_ba8gm")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0.02, 0.00266667, 0, 1)
+scale = Vector2(16, 32)
+mesh = SubResource("QuadMesh_v6xrn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_0phs7")
+
+[node name="Location_pos" type="Marker2D" parent="."]
+
+[node name="LockedDoor" type="Sprite2D" parent="."]
+texture = ExtResource("2_v6xrn")
+script = ExtResource("3_50cdl")
+
+[node name="InteractionArea" parent="LockedDoor" instance=ExtResource("4_y5njw")]
+action_name = "Unlock Door"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LockedDoor/InteractionArea"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_4xadh")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

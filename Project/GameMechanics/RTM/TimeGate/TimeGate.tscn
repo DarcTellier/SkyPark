@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1y78ucxvl3g3"]
+
+[ext_resource type="Script" uid="uid://babdmhedy5yio" path="res://GameMechanics/RTM/TimeGate/time_gate.gd" id="1_krim8"]
+[ext_resource type="Texture2D" uid="uid://c6fywfjuqwdh7" path="res://Assets/Art/Bridge.png" id="2_rljeg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_krim8"]
+size = Vector2(112, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rljeg"]
+size = Vector2(112, 16)
+
+[node name="TimeGate" type="Node2D"]
+position = Vector2(301, 124)
+rotation = 1.5708
+script = ExtResource("1_krim8")
+schedule_windows = Array[Dictionary]([{
+"close": {
+"hour": 6,
+"minute": 43,
+"second": 50
+},
+"open": {
+"hour": 6,
+"minute": 43,
+"second": 45
+}
+}, {
+"close": {
+"hour": 0,
+"minute": 10,
+"second": 0
+},
+"open": {
+"hour": 23,
+"minute": 50,
+"second": 0
+}
+}])
+
+[node name="AGate" type="Node2D" parent="."]
+position = Vector2(-46, 0)
+
+[node name="Gate" type="Sprite2D" parent="AGate"]
+texture_filter = 1
+position = Vector2(-10, 0)
+texture = ExtResource("2_rljeg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AGate"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AGate/StaticBody2D"]
+position = Vector2(-10, 0)
+shape = SubResource("RectangleShape2D_krim8")
+
+[node name="BGate" type="Node2D" parent="."]
+position = Vector2(56, 0)
+
+[node name="Gate" type="Sprite2D" parent="BGate"]
+texture_filter = 1
+scale = Vector2(1, -1)
+texture = ExtResource("2_rljeg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BGate"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BGate/StaticBody2D"]
+shape = SubResource("RectangleShape2D_rljeg")

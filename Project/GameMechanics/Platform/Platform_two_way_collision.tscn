@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://qk401y4swsdx"]
+
+[ext_resource type="Script" uid="uid://deplul5ej72n7" path="res://GameMechanics/Platform/platform_two_way_collision.gd" id="1_uyl7e"]
+[ext_resource type="Texture2D" uid="uid://bcw08eqr5l11a" path="res://Assets/Art/Platform.png" id="2_jqv3u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smgmm"]
+size = Vector2(64, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78eoj"]
+size = Vector2(64, 1)
+
+[node name="Platform_two_way_collision" type="AnimatableBody2D" groups=["platforms"]]
+position = Vector2(8, 0)
+script = ExtResource("1_uyl7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_smgmm")
+one_way_collision = true
+
+[node name="Platform" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+texture = ExtResource("2_jqv3u")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -8.5)
+shape = SubResource("RectangleShape2D_78eoj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

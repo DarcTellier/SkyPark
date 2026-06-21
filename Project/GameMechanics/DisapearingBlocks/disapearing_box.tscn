@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://jv48chw215gw"]
+
+[ext_resource type="Script" uid="uid://chvfdb0m2nyxr" path="res://GameMechanics/DisapearingBlocks/DisapearingBox.gd" id="1_h737q"]
+[ext_resource type="Texture2D" uid="uid://drdmvl0x5yhnf" path="res://Assets/Art/OrangeBox.png" id="2_55qhr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00su1"]
+size = Vector2(16, 16)
+
+[node name="DisapearingBoxOrange" type="Node2D"]
+script = ExtResource("1_h737q")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_00su1")
+
+[node name="OrangeBox" type="Sprite2D" parent="."]
+texture = ExtResource("2_55qhr")

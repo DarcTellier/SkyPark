@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://0klg4dccw3oe"]
+
+[ext_resource type="PackedScene" uid="uid://dcs588ewfa2pm" path="res://Levels/StartArea.tscn" id="1_wxgxv"]
+[ext_resource type="PackedScene" uid="uid://urwglsrgh5cx" path="res://Levels/ZoneA/zone_a_1.tscn" id="2_jw1lh"]
+[ext_resource type="PackedScene" uid="uid://crj0lw3pyxu1h" path="res://Player/player.tscn" id="3_qppml"]
+[ext_resource type="PackedScene" uid="uid://bdpb0byg62j6a" path="res://GameMechanics/Doors/door.tscn" id="4_epe2e"]
+
+[node name="World" type="Node2D" unique_id=1228415872]
+metadata/_edit_horizontal_guides_ = [6423.0]
+
+[node name="Noraclave2" parent="." unique_id=1957217989 instance=ExtResource("1_wxgxv")]
+
+[node name="ZoneA-1" parent="." unique_id=2105631576 instance=ExtResource("2_jw1lh")]
+position = Vector2(2814, -273)
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=2045531157]
+position = Vector2(-128, 100)
+
+[node name="Player" parent="." unique_id=517693522 instance=ExtResource("3_qppml")]
+position = Vector2(3458, 293)
+
+[node name="Door" parent="." unique_id=26080206 instance=ExtResource("4_epe2e")]
+position = Vector2(608, 560)
+door_name = "A"
+destination = "B"
+locked = true
+
+[node name="Door2" parent="." unique_id=529967260 instance=ExtResource("4_epe2e")]
+position = Vector2(3244, 322)
+door_name = "B"
+destination = "A"

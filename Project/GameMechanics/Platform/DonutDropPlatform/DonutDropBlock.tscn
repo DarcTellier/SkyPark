@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://du5kdkiy4b7yu"]
+
+[ext_resource type="Script" uid="uid://dnn0s8wa30m1r" path="res://GameMechanics/Platform/DonutDropPlatform/donut_drop_block.gd" id="1_phnf7"]
+[ext_resource type="PackedScene" uid="uid://dh0bg0eo8yens" path="res://GameMechanics/Platform/DonutDropPlatform/donut_platform.tscn" id="2_viap3"]
+
+[node name="DonutDropBlock" type="Node2D"]
+script = ExtResource("1_phnf7")
+donut_scene = ExtResource("2_viap3")
+respawn_time = 4.0
+
+[node name="DonutPlatform" parent="." instance=ExtResource("2_viap3")]

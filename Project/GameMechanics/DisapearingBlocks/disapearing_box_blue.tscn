@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://kbo3iwxuwrwy"]
+
+[ext_resource type="Script" uid="uid://chvfdb0m2nyxr" path="res://GameMechanics/DisapearingBlocks/DisapearingBox.gd" id="1_fdj8m"]
+[ext_resource type="Texture2D" uid="uid://0cpkd1daoqoa" path="res://Assets/Art/BlueBox.png" id="2_s6820"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00su1"]
+size = Vector2(16, 16)
+
+[node name="DisapearingBoxBlue" type="Node2D"]
+script = ExtResource("1_fdj8m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_00su1")
+
+[node name="BlueBox" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_s6820")

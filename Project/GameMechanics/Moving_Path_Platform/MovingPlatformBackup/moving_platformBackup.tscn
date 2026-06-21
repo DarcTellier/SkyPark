@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2xd5rxvlo4hv"]
+
+[ext_resource type="Texture2D" uid="uid://bcw08eqr5l11a" path="res://Assets/Art/Platform.png" id="1_x88pq"]
+
+[sub_resource type="Curve2D" id="Curve2D_foded"]
+
+[sub_resource type="GDScript" id="GDScript_1ykav"]
+script/source = "@tool
+extends Path2D
+
+@export var loop = false
+@export var rotates = false
+@export var speed = 0.5
+@export var direction = false
+@export var draw_line_path = true
+
+func _ready() -> void: 
+	settings()
+	draw_lines()
+	$PathFollow2D.rotates = rotates
+	
+
+func settings():
+	$PathFollow2D.loop = loop 
+	
+
+func draw_lines():
+	if draw_line_path == true:
+		for i in curve.point_count:
+			$Line2D.add_point(curve.get_point_position(i),i)
+	
+
+func _physics_process(delta: float) -> void:
+	move_platform(delta)
+	settings()
+
+
+func move_platform(delta):
+	if loop == false:
+		if $PathFollow2D.progress_ratio >= 1:
+			direction = false
+		elif $PathFollow2D.progress_ratio <= 0:
+			direction = true
+			
+		match direction:
+			true: $PathFollow2D.progress_ratio += speed * delta
+			false: 	$PathFollow2D.progress_ratio -= speed * delta
+	
+	else:
+		$PathFollow2D.progress_ratio += speed * delta
+	
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcyq1"]
+size = Vector2(64, 16)
+
+[node name="MovingPlatform" type="Path2D"]
+curve = SubResource("Curve2D_foded")
+script = SubResource("GDScript_1ykav")
+direction = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotates = false
+loop = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="PathFollow2D"]
+sync_to_physics = false
+
+[node name="Platform" type="Sprite2D" parent="PathFollow2D/AnimatableBody2D"]
+texture = ExtResource("1_x88pq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/AnimatableBody2D"]
+shape = SubResource("RectangleShape2D_mcyq1")
+
+[node name="Line2D" type="Line2D" parent="."]
+z_index = -5
+width = 2.0
+default_color = Color(0, 0, 0, 1)

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq4sm4bqr0xp1"]
+
+[ext_resource type="Script" uid="uid://cdupo8adbygn6" path="res://GameMechanics/Elevator_Skip/elevator_skip.gd" id="1_6hej2"]
+
+[node name="Elevator2" type="Node2D"]
+position = Vector2(264, 528)
+script = ExtResource("1_6hej2")
+lift_speed = 2.0
+
+[node name="end" type="Marker2D" parent="."]
+position = Vector2(0, -472)

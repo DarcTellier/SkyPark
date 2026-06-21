@@ -1,0 +1,337 @@
+[gd_scene load_steps=24 format=3 uid="uid://crj0lw3pyxu1h"]
+
+[ext_resource type="Script" uid="uid://dgcka54leon0o" path="res://Player/Player.gd" id="1_a2mvl"]
+[ext_resource type="Script" uid="uid://ddi4f881wqeff" path="res://Player/movement.gd" id="2_fhl08"]
+[ext_resource type="Texture2D" uid="uid://b2fx23cihh3g7" path="res://Player/JUMPER.png" id="2_mun31"]
+[ext_resource type="Script" uid="uid://brk0bvrhgnfqu" path="res://Player/crouch.gd" id="3_00tjw"]
+[ext_resource type="AudioStream" uid="uid://qg13ioj71ekm" path="res://Assets/SoundFX/Jump70.wav" id="3_awb2x"]
+[ext_resource type="Script" uid="uid://v3sigo8gofth" path="res://Player/ladder.gd" id="3_vtle1"]
+[ext_resource type="PackedScene" uid="uid://f5narbiaxcmv" path="res://UI/input_settings/input_settings.tscn" id="4_gwnis"]
+[ext_resource type="Shader" uid="uid://cs0m28byqhsp7" path="res://Shaders/PipeTransShader.gdshader" id="5_k53q1"]
+[ext_resource type="Texture2D" uid="uid://djwbb7vc1nyny" path="res://Player/JUMPER_Crouch .png" id="6_x3vf3"]
+[ext_resource type="Texture2D" uid="uid://ctwruo6y2l5nj" path="res://Assets/LightMask/light2dmask.png" id="8_od3ui"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufdn7"]
+size = Vector2(7, 25)
+
+[sub_resource type="Animation" id="Animation_k53q1"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_gwnis"]
+resource_name = "enter_the_down_pipe"
+length = 1.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4662),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 40)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PipeTransShader/ColorRect:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.333, 1.2321)
+}
+
+[sub_resource type="Animation" id="Animation_5htga"]
+resource_name = "enter_the_left_pipe"
+length = 1.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4662),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-40, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PipeTransShader/ColorRect:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.333, 1.2321)
+}
+
+[sub_resource type="Animation" id="Animation_x3vf3"]
+resource_name = "enter_the_right_pipe"
+length = 1.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4662),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(40, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PipeTransShader/ColorRect:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.333, 1.2321)
+}
+
+[sub_resource type="Animation" id="Animation_vtle1"]
+resource_name = "enter_the_up_pipe"
+length = 1.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4662),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -40)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PipeTransShader/ColorRect:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.333, 1.2321)
+}
+
+[sub_resource type="Animation" id="Animation_fhl08"]
+resource_name = "exit_the_down_pipe"
+length = 1.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4662),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 40)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PipeTransShader/ColorRect:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.333, 1.2321)
+}
+
+[sub_resource type="Animation" id="Animation_apopc"]
+resource_name = "exit_the_left_pipe"
+length = 1.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4662),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-40, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PipeTransShader/ColorRect:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.333, 1.2321)
+}
+
+[sub_resource type="Animation" id="Animation_00tjw"]
+resource_name = "exit_the_right_pipe"
+length = 1.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4662),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(40, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PipeTransShader/ColorRect:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.333, 1.2321)
+}
+
+[sub_resource type="Animation" id="Animation_od3ui"]
+resource_name = "exit_the_up_pipe"
+length = 1.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4662),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -40)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PipeTransShader/ColorRect:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.333, 1.2321)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fhl08"]
+_data = {
+&"RESET": SubResource("Animation_k53q1"),
+&"enter_the_down_pipe": SubResource("Animation_gwnis"),
+&"enter_the_left_pipe": SubResource("Animation_5htga"),
+&"enter_the_right_pipe": SubResource("Animation_x3vf3"),
+&"enter_the_up_pipe": SubResource("Animation_vtle1"),
+&"exit_the_down_pipe": SubResource("Animation_fhl08"),
+&"exit_the_left_pipe": SubResource("Animation_apopc"),
+&"exit_the_right_pipe": SubResource("Animation_00tjw"),
+&"exit_the_up_pipe": SubResource("Animation_od3ui")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fhl08"]
+shader = ExtResource("5_k53q1")
+shader_parameter/progress = 0.0
+shader_parameter/diamondPixelSize = 10.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_00tjw"]
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+texture_filter = 1
+collision_layer = 1035
+collision_mask = 1025
+floor_stop_on_slope = false
+floor_max_angle = 0.532325
+script = ExtResource("1_a2mvl")
+SPEED = 200.0
+cayote_Time = 20
+metadata/_edit_horizontal_guides_ = [16.0, 48.0]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -120.5)
+enabled = false
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
+
+[node name="Movement" type="Node" parent="."]
+script = ExtResource("2_fhl08")
+
+[node name="Crouch" type="Node" parent="."]
+script = ExtResource("3_00tjw")
+
+[node name="Ladder" type="Node" parent="."]
+script = ExtResource("3_vtle1")
+
+[node name="GrapplingHook" type="Node" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_mun31")
+
+[node name="SpriteCrouch" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_x3vf3")
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3.5)
+shape = SubResource("RectangleShape2D_ufdn7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_awb2x")
+volume_db = -15.727
+panning_strength = 3.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fhl08")
+}
+
+[node name="PipeTransShader" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="PipeTransShader"]
+material = SubResource("ShaderMaterial_fhl08")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="UnstuckTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="InputSettings" parent="CanvasLayer" instance=ExtResource("4_gwnis")]
+
+[node name="EyeWhite" type="MeshInstance2D" parent="."]
+visible = false
+z_index = 10
+position = Vector2(1.5, -8)
+scale = Vector2(1, 2)
+mesh = SubResource("QuadMesh_00tjw")
+
+[node name="PointLight2D" type="PointLight2D" parent="EyeWhite"]
+energy = 0.35
+texture = ExtResource("8_od3ui")
+texture_scale = 0.01
+
+[connection signal="timeout" from="UnstuckTimer" to="." method="_on_unstuck_timer_timeout"]

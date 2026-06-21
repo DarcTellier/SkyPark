@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk582mkuhn1qd"]
+
+[ext_resource type="Script" uid="uid://cli7fcdy7fxyf" path="res://GameMechanics/conveyor_belt/OldConveyorSystem/conveyor.gd" id="1_xyn26"]
+[ext_resource type="Texture2D" uid="uid://b1v7jm4d4q1d7" path="res://Assets/Art/Conveyor.png" id="2_7htls"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7tmi"]
+size = Vector2(48, 10)
+
+[sub_resource type="QuadMesh" id="QuadMesh_qp2em"]
+
+[node name="Conveyor" type="AnimatableBody2D"]
+texture_filter = 1
+script = ExtResource("1_xyn26")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24, 5)
+shape = SubResource("RectangleShape2D_f7tmi")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(4, 8)
+scale = Vector2(8, 16)
+mesh = SubResource("QuadMesh_qp2em")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(16, 8)
+scale = Vector2(8, 16)
+mesh = SubResource("QuadMesh_qp2em")
+
+[node name="MeshInstance2D6" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(28, 8)
+scale = Vector2(8, 16)
+mesh = SubResource("QuadMesh_qp2em")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(28, 8)
+scale = Vector2(8, 16)
+mesh = SubResource("QuadMesh_qp2em")
+
+[node name="MeshInstance2D7" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(40, 8)
+scale = Vector2(8, 16)
+mesh = SubResource("QuadMesh_qp2em")
+
+[node name="Conveyor" type="Sprite2D" parent="."]
+position = Vector2(24, 8)
+texture = ExtResource("2_7htls")

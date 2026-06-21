@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://rdhlk37f7a5u"]
+
+[ext_resource type="Script" uid="uid://woyaxwhll557" path="res://CameraTools/turn_on_follow_camera.gd" id="1_rgq63"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjdc1"]
+size = Vector2(2128, 1104)
+
+[node name="TurnOnFollowCamera" type="Area2D"]
+script = ExtResource("1_rgq63")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(472, 168)
+shape = SubResource("RectangleShape2D_xjdc1")
+debug_color = Color(0, 0.595, 0.7, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

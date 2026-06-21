@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=3 uid="uid://1nqtaudb0ijo"]
+
+[ext_resource type="Texture2D" uid="uid://dgs6bk7ykdhry" path="res://Assets/SpriteSheet/ChestSpriteSheet.png" id="1_06s4m"]
+[ext_resource type="Script" uid="uid://c60e6aquatw71" path="res://GameMechanics/Chests/chest.gd" id="1_qxfws"]
+[ext_resource type="PackedScene" uid="uid://8eeb0x7kjhqf" path="res://interactions/interaction area/interaction_area.tscn" id="2_p35t7"]
+[ext_resource type="Script" uid="uid://ctvdle3qd0s7d" path="res://Shaders/loot_dialogue.gd" id="4_7wfk8"]
+[ext_resource type="FontFile" uid="uid://c3av0ae5wkxr8" path="res://Assets/Fonts/dragon-warrior-iii.ttf" id="4_rlpy2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p35t7"]
+size = Vector2(32, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxfws"]
+size = Vector2(64, 18)
+
+[node name="Chest" type="StaticBody2D"]
+script = ExtResource("1_qxfws")
+metadata/_edit_vertical_guides_ = [-32.0, 32.0]
+
+[node name="ChestSpriteSheet" type="Sprite2D" parent="."]
+texture = ExtResource("1_06s4m")
+hframes = 4
+vframes = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_p35t7")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_p35t7")]
+action_name = "OpenChest"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_qxfws")
+
+[node name="LootDialogue" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("4_7wfk8")
+
+[node name="Control" type="Control" parent="LootDialogue"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="LootDialogue/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -305.0
+offset_top = -180.0
+offset_right = 305.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LootDialogue/Control/Panel"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 12.0
+offset_bottom = 62.0
+grow_horizontal = 2
+
+[node name="LOOTLOG" type="Label" parent="LootDialogue/Control/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("4_rlpy2")
+theme_override_font_sizes/font_size = 32
+text = "YOU GOT:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="LootDialogue/Control/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="LOOT" type="Label" parent="LootDialogue/Control/Panel/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("4_rlpy2")
+theme_override_font_sizes/font_size = 32
+text = "LOOT
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LootDialogueTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
+[connection signal="timeout" from="LootDialogueTimer" to="." method="_on_loot_dialogue_timer_timeout"]

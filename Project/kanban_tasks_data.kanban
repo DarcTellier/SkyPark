@@ -1,0 +1,380 @@
+{
+	"categories": [
+		{
+			"uuid": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"title": "Task",
+			"color": "de384a"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "3c73aebb-6b77-4faf-9bfa-e4bfe5d4e4d2",
+			"title": "Todo",
+			"tasks": [
+				"1624cb51-12dc-49b2-9331-db4070a5de11",
+				"f6b54d09-9164-4115-a965-c83312595aed",
+				"ae415a72-6a78-4776-bd4a-bf94266f67b7",
+				"db99e767-30b3-46ce-b2df-00e2f303e5e2",
+				"a849b3b1-5076-408f-82ee-d310be981166",
+				"c4151983-efe3-4271-9fa4-5cb5cc1a2fa1",
+				"66e0ef7f-92a5-489d-88bb-6be0fa84849f",
+				"f935b255-4a43-4469-9951-dce19314360c",
+				"e5f43404-8be4-4eb2-8333-1de4f3af6171",
+				"0cd01409-b013-4713-bfe8-c550d4b201a2",
+				"457ea2b5-ca9c-4e54-b4c9-7f6ffefdd21f",
+				"8e48ff26-f1c9-4a2d-b69b-39a95082f41a",
+				"d3c3cb8c-3d89-4207-860f-2f3837babc2e",
+				"e36b46af-bb49-47bb-8208-5a9dbbab0316",
+				"a855bef9-caae-4ffc-b668-b3b246df7f83",
+				"b67b0d97-796e-4c5d-833c-2b2ad8627e3e",
+				"0b997293-c044-4408-8ae5-d794da8598e4",
+				"c110b449-9870-4452-9ff6-43dff9f1fe74",
+				"7e0fe21c-d64f-41d1-99cf-e7d210f7943d",
+				"c4d11d90-e375-40fc-ba0f-18ac46be40ad",
+				"5b6b8a1e-a85f-4a8f-b31a-3d4da249f993",
+				"9318f267-c4b6-4d5a-a13a-26acf8164b03",
+				"3b1d7153-0717-47a7-9ee4-772129a8ee21"
+			]
+		},
+		{
+			"uuid": "d86f7127-6204-4d78-9636-e131877fdc38",
+			"title": "Doing",
+			"tasks": [
+				"a587d3ca-8a58-4381-968d-e328561bfb3e",
+				"be7a356a-4aec-41b8-947d-f5952a6727fc"
+			]
+		},
+		{
+			"uuid": "ac5c2b6b-2961-422f-a1a9-82991b6fcfc6",
+			"title": "Done",
+			"tasks": [
+				"45d21b18-9c40-4fe7-9de1-874d786acc3f",
+				"c01f20c4-adcd-42ef-8b71-e15c82b24687",
+				"e84d8b99-30e3-437d-b4f6-10a3c8ddbd4c",
+				"fa132509-ad1c-44de-b0c4-14b7e01615b6",
+				"9c758cf7-0d3a-4ba6-95cb-be2cfd8e86ed",
+				"de325c40-676c-4725-81e5-0f6e5a3d5479",
+				"cd554dd2-2a65-41f6-b049-db0057521721",
+				"6a1bd327-546c-4da8-8242-274ae329f7f4",
+				"b365abfb-3415-4703-b4d2-6127721e6795",
+				"205fe505-ca94-42ae-b789-8a61f5a547f2",
+				"450be229-48b7-4d76-b542-87af2bd6b0c3",
+				"d35f6a05-0e90-415c-8919-98584680bad2",
+				"76621173-a1e6-43f2-bd5a-e1e4b5c94c11",
+				"fa04b33b-6a17-4525-9672-856f6c9ae083",
+				"fe149f7b-ef2d-44fd-857c-654df8566062",
+				"cb3d2ae1-e647-47ef-90c2-7acbe68ddfac",
+				"af9a6a3d-a16d-49af-aa1a-f8f3d5580a9f"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "cb3d2ae1-e647-47ef-90c2-7acbe68ddfac",
+			"title": "TextBox ",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "af9a6a3d-a16d-49af-aa1a-f8f3d5580a9f",
+			"title": "interaction",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "ae415a72-6a78-4776-bd4a-bf94266f67b7",
+			"title": "keybinding",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "450be229-48b7-4d76-b542-87af2bd6b0c3",
+			"title": "moveable platform",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "205fe505-ca94-42ae-b789-8a61f5a547f2",
+			"title": "moveable platform draws line path",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "6a1bd327-546c-4da8-8242-274ae329f7f4",
+			"title": "mario 3 donut platform",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "a849b3b1-5076-408f-82ee-d310be981166",
+			"title": "inventory",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "9c758cf7-0d3a-4ba6-95cb-be2cfd8e86ed",
+			"title": "treasure chest",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "db99e767-30b3-46ce-b2df-00e2f303e5e2",
+			"title": "shop",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "c4151983-efe3-4271-9fa4-5cb5cc1a2fa1",
+			"title": "wallet size",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "66e0ef7f-92a5-489d-88bb-6be0fa84849f",
+			"title": "backpack upgrades",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "76621173-a1e6-43f2-bd5a-e1e4b5c94c11",
+			"title": "one way platforms",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "cd554dd2-2a65-41f6-b049-db0057521721",
+			"title": "mario 3 doors /cave entrance",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "f935b255-4a43-4469-9951-dce19314360c",
+			"title": "swimming",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "e5f43404-8be4-4eb2-8333-1de4f3af6171",
+			"title": "grappling hook",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "fa04b33b-6a17-4525-9672-856f6c9ae083",
+			"title": "White block ",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "fa132509-ad1c-44de-b0c4-14b7e01615b6",
+			"title": "ladders",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "0cd01409-b013-4713-bfe8-c550d4b201a2",
+			"title": "Falling platform + rope ",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "457ea2b5-ca9c-4e54-b4c9-7f6ffefdd21f",
+			"title": "Minecart ",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "fe149f7b-ef2d-44fd-857c-654df8566062",
+			"title": "elevator controllable",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "de325c40-676c-4725-81e5-0f6e5a3d5479",
+			"title": "double door gate ",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "d3c3cb8c-3d89-4207-860f-2f3837babc2e",
+			"title": "invisable walls",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "e36b46af-bb49-47bb-8208-5a9dbbab0316",
+			"title": "mario 3 up down level water level ",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "e84d8b99-30e3-437d-b4f6-10a3c8ddbd4c",
+			"title": "scrolling camera",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "a855bef9-caae-4ffc-b668-b3b246df7f83",
+			"title": "vibration for stuff / try fall shake ",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "d35f6a05-0e90-415c-8919-98584680bad2",
+			"title": "Pipes",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "f6b54d09-9164-4115-a965-c83312595aed",
+			"title": "Menu on escape pauses everything",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "b365abfb-3415-4703-b4d2-6127721e6795",
+			"title": "Time Bridge mechanic",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "0b997293-c044-4408-8ae5-d794da8598e4",
+			"title": "Imstuck Bro ",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "c110b449-9870-4452-9ff6-43dff9f1fe74",
+			"title": "ImStuckBro Skit with owl",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "7e0fe21c-d64f-41d1-99cf-e7d210f7943d",
+			"title": "SandPit",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "8e48ff26-f1c9-4a2d-b69b-39a95082f41a",
+			"title": "ctrl alt F4 : gives you an achievement in this game  on pc ",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "c4d11d90-e375-40fc-ba0f-18ac46be40ad",
+			"title": "Spining room ",
+			"description": " castle vanian 4  \n",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "5b6b8a1e-a85f-4a8f-b31a-3d4da249f993",
+			"title": "SURVEYOR SPRAY PAINT ON THE WALL:",
+			"description": "“SEA LEVEL”\n→ Arrow pointing at the floor\n🖌️ “Congratulations. You’re halfway there.”\n🖌️ “Now the real climb begins.”\n\n\nPeep:\n\n“W-we’re still underground?! B-but I packed a towel for the beach!”\n“I thought 0 meant FREEDOM!!”\n\nWant to include some fake graffiti from previous climbers like:\n\n“Sea level my butt.”\n“I saw the sky once… in a fever dream.”\n“-0m club. No t-shirts. Just trauma.”",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "c01f20c4-adcd-42ef-8b71-e15c82b24687",
+			"title": "Solid platform",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "b67b0d97-796e-4c5d-833c-2b2ad8627e3e",
+			"title": "OnlydownPlatforms",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "9318f267-c4b6-4d5a-a13a-26acf8164b03",
+			"title": "Create slides",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "1624cb51-12dc-49b2-9331-db4070a5de11",
+			"title": "Static camera /pause bug",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "45d21b18-9c40-4fe7-9de1-874d786acc3f",
+			"title": "one way wall ",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "3b1d7153-0717-47a7-9ee4-772129a8ee21",
+			"title": "Notes platforms can go through walls but you cant",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "be7a356a-4aec-41b8-947d-f5952a6727fc",
+			"title": "platforms sliding in out of walls",
+			"description": "from tiny toon nes \n",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "a587d3ca-8a58-4381-968d-e328561bfb3e",
+			"title": "down to crouch",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"3c73aebb-6b77-4faf-9bfa-e4bfe5d4e4d2"
+			],
+			[
+				"d86f7127-6204-4d78-9636-e131877fdc38"
+			],
+			[
+				"ac5c2b6b-2961-422f-a1a9-82991b6fcfc6"
+			]
+		]
+	}
+}

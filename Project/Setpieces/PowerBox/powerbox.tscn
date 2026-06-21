@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgl5og0jfxw5s"]
+
+[ext_resource type="Script" uid="uid://gbol42w25cpo" path="res://Setpieces/PowerBox/powerbox.gd" id="1_jpxwm"]
+[ext_resource type="Texture2D" uid="uid://p8o0cm1q282j" path="res://Assets/Art/PowerBox.png" id="1_n2yso"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isdd5"]
+size = Vector2(64, 80)
+
+[node name="Powerbox" type="Node2D"]
+z_index = -1
+script = ExtResource("1_jpxwm")
+
+[node name="PowerBox" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_n2yso")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -78.0
+offset_top = -80.0
+offset_right = 62.0
+offset_bottom = -44.0
+text = "[E] Turn On Power"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_isdd5")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

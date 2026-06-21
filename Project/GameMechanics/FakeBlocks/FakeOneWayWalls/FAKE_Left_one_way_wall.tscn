@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh60sjtbogfim"]
+
+[ext_resource type="Texture2D" uid="uid://ccx6lj0ker5wi" path="res://Assets/Art/OneWay.png" id="1_hjsrt"]
+
+[node name="LeftOneWayPlatform" type="AnimatableBody2D" groups=["platforms"]]
+modulate = Color(0, 0.883333, 1, 1)
+rotation = -1.5708
+
+[node name="Platform" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = -1.5708
+texture = ExtResource("1_hjsrt")

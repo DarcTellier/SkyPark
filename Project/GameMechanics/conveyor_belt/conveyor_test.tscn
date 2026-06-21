@@ -1,0 +1,405 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds0jbrciguhg2"]
+
+[ext_resource type="PackedScene" uid="uid://crj0lw3pyxu1h" path="res://Player/player.tscn" id="1_4rfyi"]
+[ext_resource type="PackedScene" uid="uid://b5cl8by2sgvu2" path="res://GameMechanics/conveyor_belt/Conveyor.tscn" id="2_af74q"]
+[ext_resource type="PackedScene" uid="uid://qk401y4swsdx" path="res://GameMechanics/Platform/Platform_two_way_collision.tscn" id="3_af74q"]
+
+[node name="Conveyor Test" type="Node2D"]
+metadata/_edit_vertical_guides_ = [1217.0]
+
+[node name="Player" parent="." instance=ExtResource("1_4rfyi")]
+position = Vector2(340, 132)
+
+[node name="Conveyor2" parent="." instance=ExtResource("2_af74q")]
+position = Vector2(-47, 564)
+
+[node name="Platform_two_way_collision" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(1092, 0)
+
+[node name="Platform_two_way_collision2" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(1156, 0)
+
+[node name="Platform_two_way_collision3" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(1220, 0)
+
+[node name="Platform_two_way_collision4" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(16, 0)
+
+[node name="Platform_two_way_collision5" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(80, 0)
+
+[node name="Platform_two_way_collision6" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(140, 0)
+
+[node name="Platform_two_way_collision7" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(204, 0)
+
+[node name="Platform_two_way_collision8" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(268, 0)
+
+[node name="Platform_two_way_collision9" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(332, 0)
+
+[node name="Platform_two_way_collision10" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(396, 0)
+
+[node name="Platform_two_way_collision11" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(456, 0)
+
+[node name="Platform_two_way_collision12" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(520, 0)
+
+[node name="Platform_two_way_collision13" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(584, 0)
+
+[node name="Platform_two_way_collision14" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(648, 0)
+
+[node name="Platform_two_way_collision15" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(712, 0)
+
+[node name="Platform_two_way_collision16" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(772, 0)
+
+[node name="Platform_two_way_collision17" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(836, 0)
+
+[node name="Platform_two_way_collision18" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(900, 0)
+
+[node name="Platform_two_way_collision19" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(964, 0)
+
+[node name="Platform_two_way_collision20" parent="Conveyor2" instance=ExtResource("3_af74q")]
+position = Vector2(1028, 0)
+
+[node name="Conveyor3" parent="." instance=ExtResource("2_af74q")]
+position = Vector2(1217, 628)
+
+[node name="end" parent="Conveyor3" index="0"]
+position = Vector2(-1271, -2)
+
+[node name="Platform_two_way_collision" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-1264, 0)
+
+[node name="Platform_two_way_collision2" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-56, 0)
+
+[node name="Platform_two_way_collision3" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-120, 0)
+
+[node name="Platform_two_way_collision4" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-180, 0)
+
+[node name="Platform_two_way_collision5" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-244, 0)
+
+[node name="Platform_two_way_collision6" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-308, 0)
+
+[node name="Platform_two_way_collision7" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-372, 0)
+
+[node name="Platform_two_way_collision8" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-436, 0)
+
+[node name="Platform_two_way_collision9" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-500, 0)
+
+[node name="Platform_two_way_collision10" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-564, 0)
+
+[node name="Platform_two_way_collision11" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-628, 0)
+
+[node name="Platform_two_way_collision12" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-692, 0)
+
+[node name="Platform_two_way_collision13" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-752, 0)
+
+[node name="Platform_two_way_collision14" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-816, 0)
+
+[node name="Platform_two_way_collision15" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-880, 0)
+
+[node name="Platform_two_way_collision16" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-944, 0)
+
+[node name="Platform_two_way_collision17" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-1008, 0)
+
+[node name="Platform_two_way_collision18" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-1072, 0)
+
+[node name="Platform_two_way_collision19" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-1136, 0)
+
+[node name="Platform_two_way_collision20" parent="Conveyor3" instance=ExtResource("3_af74q")]
+position = Vector2(-1200, 0)
+
+[node name="Conveyor4" parent="." instance=ExtResource("2_af74q")]
+position = Vector2(-47, 436)
+
+[node name="Platform_two_way_collision" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(1092, 0)
+
+[node name="Platform_two_way_collision2" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(1156, 0)
+
+[node name="Platform_two_way_collision3" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(1220, 0)
+
+[node name="Platform_two_way_collision4" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(16, 0)
+
+[node name="Platform_two_way_collision5" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(80, 0)
+
+[node name="Platform_two_way_collision6" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(140, 0)
+
+[node name="Platform_two_way_collision7" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(204, 0)
+
+[node name="Platform_two_way_collision8" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(268, 0)
+
+[node name="Platform_two_way_collision9" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(332, 0)
+
+[node name="Platform_two_way_collision10" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(396, 0)
+
+[node name="Platform_two_way_collision11" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(456, 0)
+
+[node name="Platform_two_way_collision12" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(520, 0)
+
+[node name="Platform_two_way_collision13" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(584, 0)
+
+[node name="Platform_two_way_collision14" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(648, 0)
+
+[node name="Platform_two_way_collision15" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(712, 0)
+
+[node name="Platform_two_way_collision16" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(772, 0)
+
+[node name="Platform_two_way_collision17" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(836, 0)
+
+[node name="Platform_two_way_collision18" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(900, 0)
+
+[node name="Platform_two_way_collision19" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(964, 0)
+
+[node name="Platform_two_way_collision20" parent="Conveyor4" instance=ExtResource("3_af74q")]
+position = Vector2(1028, 0)
+
+[node name="Conveyor5" parent="." instance=ExtResource("2_af74q")]
+position = Vector2(1217, 500)
+
+[node name="end" parent="Conveyor5" index="0"]
+position = Vector2(-1271, -2)
+
+[node name="Platform_two_way_collision" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-1264, 0)
+
+[node name="Platform_two_way_collision2" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-56, 0)
+
+[node name="Platform_two_way_collision3" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-120, 0)
+
+[node name="Platform_two_way_collision4" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-180, 0)
+
+[node name="Platform_two_way_collision5" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-244, 0)
+
+[node name="Platform_two_way_collision6" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-308, 0)
+
+[node name="Platform_two_way_collision7" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-372, 0)
+
+[node name="Platform_two_way_collision8" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-436, 0)
+
+[node name="Platform_two_way_collision9" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-500, 0)
+
+[node name="Platform_two_way_collision10" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-564, 0)
+
+[node name="Platform_two_way_collision11" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-628, 0)
+
+[node name="Platform_two_way_collision12" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-692, 0)
+
+[node name="Platform_two_way_collision13" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-752, 0)
+
+[node name="Platform_two_way_collision14" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-816, 0)
+
+[node name="Platform_two_way_collision15" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-880, 0)
+
+[node name="Platform_two_way_collision16" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-944, 0)
+
+[node name="Platform_two_way_collision17" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-1008, 0)
+
+[node name="Platform_two_way_collision18" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-1072, 0)
+
+[node name="Platform_two_way_collision19" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-1136, 0)
+
+[node name="Platform_two_way_collision20" parent="Conveyor5" instance=ExtResource("3_af74q")]
+position = Vector2(-1200, 0)
+
+[node name="Conveyor6" parent="." instance=ExtResource("2_af74q")]
+position = Vector2(-47, 308)
+
+[node name="Platform_two_way_collision" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(1092, 0)
+
+[node name="Platform_two_way_collision2" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(1156, 0)
+
+[node name="Platform_two_way_collision3" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(1220, 0)
+
+[node name="Platform_two_way_collision4" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(16, 0)
+
+[node name="Platform_two_way_collision5" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(80, 0)
+
+[node name="Platform_two_way_collision6" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(140, 0)
+
+[node name="Platform_two_way_collision7" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(204, 0)
+
+[node name="Platform_two_way_collision8" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(268, 0)
+
+[node name="Platform_two_way_collision9" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(332, 0)
+
+[node name="Platform_two_way_collision10" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(396, 0)
+
+[node name="Platform_two_way_collision11" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(456, 0)
+
+[node name="Platform_two_way_collision12" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(520, 0)
+
+[node name="Platform_two_way_collision13" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(584, 0)
+
+[node name="Platform_two_way_collision14" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(648, 0)
+
+[node name="Platform_two_way_collision15" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(712, 0)
+
+[node name="Platform_two_way_collision16" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(772, 0)
+
+[node name="Platform_two_way_collision17" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(836, 0)
+
+[node name="Platform_two_way_collision18" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(900, 0)
+
+[node name="Platform_two_way_collision19" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(964, 0)
+
+[node name="Platform_two_way_collision20" parent="Conveyor6" instance=ExtResource("3_af74q")]
+position = Vector2(1028, 0)
+
+[node name="Conveyor7" parent="." instance=ExtResource("2_af74q")]
+position = Vector2(1217, 372)
+
+[node name="end" parent="Conveyor7" index="0"]
+position = Vector2(-1271, -2)
+
+[node name="Platform_two_way_collision" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-1264, 0)
+
+[node name="Platform_two_way_collision2" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-56, 0)
+
+[node name="Platform_two_way_collision3" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-120, 0)
+
+[node name="Platform_two_way_collision4" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-180, 0)
+
+[node name="Platform_two_way_collision5" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-244, 0)
+
+[node name="Platform_two_way_collision6" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-308, 0)
+
+[node name="Platform_two_way_collision7" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-372, 0)
+
+[node name="Platform_two_way_collision8" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-436, 0)
+
+[node name="Platform_two_way_collision9" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-500, 0)
+
+[node name="Platform_two_way_collision10" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-564, 0)
+
+[node name="Platform_two_way_collision11" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-628, 0)
+
+[node name="Platform_two_way_collision12" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-692, 0)
+
+[node name="Platform_two_way_collision13" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-752, 0)
+
+[node name="Platform_two_way_collision14" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-816, 0)
+
+[node name="Platform_two_way_collision15" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-880, 0)
+
+[node name="Platform_two_way_collision16" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-944, 0)
+
+[node name="Platform_two_way_collision17" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-1008, 0)
+
+[node name="Platform_two_way_collision18" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-1072, 0)
+
+[node name="Platform_two_way_collision19" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-1136, 0)
+
+[node name="Platform_two_way_collision20" parent="Conveyor7" instance=ExtResource("3_af74q")]
+position = Vector2(-1200, 0)
+
+[editable path="Conveyor2"]
+[editable path="Conveyor3"]
+[editable path="Conveyor4"]
+[editable path="Conveyor5"]
+[editable path="Conveyor6"]
+[editable path="Conveyor7"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv875agreijqm"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ptgyr"]
+size = Vector2(10000, 10000)
+
+[node name="BG" type="Node2D"]
+z_index = -100
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+self_modulate = Color(0.106403, 0.311922, 0.48568, 1)
+show_behind_parent = true
+mesh = SubResource("QuadMesh_ptgyr")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]

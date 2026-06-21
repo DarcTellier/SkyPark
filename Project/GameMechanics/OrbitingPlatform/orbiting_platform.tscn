@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bssllwhv8q114"]
+
+[ext_resource type="Script" uid="uid://crn0cvtbliull" path="res://GameMechanics/OrbitingPlatform/OrbitingPlatform.gd" id="1_o7nh3"]
+[ext_resource type="Texture2D" uid="uid://2rtj2344w1e" path="res://Assets/Art/OrbitingPlatformBlock.png" id="2_5uysf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_leg18"]
+size = Vector2(16, 16)
+
+[node name="OrbitingPlatform" type="Node2D"]
+script = ExtResource("1_o7nh3")
+radius = Vector2(100, 100)
+rotation_duration = 10.0
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_5uysf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_leg18")

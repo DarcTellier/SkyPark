@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ikrjn0kuf183"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_udbwk"]
+radius = 16.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ri0jd"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_entkr"]
+
+[node name="BallTest" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_udbwk")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(-9.54215e-07, 1.90735e-06)
+scale = Vector2(32, 31.964)
+mesh = SubResource("SphereMesh_ri0jd")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="MeshInstance2D"]
+modulate = Color(0.00392157, 0.00392157, 0.00392157, 1)
+position = Vector2(0.25, -1.11759e-07)
+scale = Vector2(0.5, 0.125)
+mesh = SubResource("QuadMesh_entkr")

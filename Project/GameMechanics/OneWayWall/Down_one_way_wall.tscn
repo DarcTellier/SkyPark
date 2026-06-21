@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://umd1e5m481pp"]
+
+[ext_resource type="Texture2D" uid="uid://ccx6lj0ker5wi" path="res://Assets/Art/OneWay.png" id="1_utplt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smgmm"]
+size = Vector2(16, 16)
+
+[node name="DownOneWayPlatform" type="AnimatableBody2D" groups=["platforms"]]
+modulate = Color(0, 0.883333, 1, 1)
+rotation = 3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_smgmm")
+one_way_collision = true
+
+[node name="Platform" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = -1.5708
+texture = ExtResource("1_utplt")

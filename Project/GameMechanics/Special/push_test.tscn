@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ph3l25s200yp"]
+
+[ext_resource type="Texture2D" uid="uid://0cpkd1daoqoa" path="res://Assets/Art/BlueBox.png" id="1_x71vj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1al0"]
+size = Vector2(32, 32)
+
+[node name="PushTest" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t1al0")
+
+[node name="BlueBox" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_x71vj")

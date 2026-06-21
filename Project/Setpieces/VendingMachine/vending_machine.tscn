@@ -1,0 +1,248 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0dgyne1w1lkd"]
+
+[ext_resource type="Script" uid="uid://dytlje777qb4t" path="res://Setpieces/VendingMachine/vending_machine.gd" id="1_6xndp"]
+[ext_resource type="Texture2D" uid="uid://bxv0w82qieq15" path="res://Assets/Art/SnackShack.png" id="1_gvfdi"]
+[ext_resource type="Texture2D" uid="uid://cagjdgjkhd6mx" path="res://Assets/icon.svg" id="2_3xpst"]
+[ext_resource type="FontFile" uid="uid://c3av0ae5wkxr8" path="res://Assets/Fonts/dragon-warrior-iii.ttf" id="3_saeyp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8xv5"]
+size = Vector2(95.8302, 16.0825)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khbxd"]
+size = Vector2(94.5419, 93.3528)
+
+[node name="VendingMachine" type="StaticBody2D"]
+z_index = -1
+script = ExtResource("1_6xndp")
+
+[node name="SnackShack" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_gvfdi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.944464, -46.0413)
+shape = SubResource("RectangleShape2D_r8xv5")
+one_way_collision = true
+
+[node name="InteractLabel" type="Label" parent="."]
+offset_left = -48.0
+offset_top = -80.0
+offset_right = 45.0
+offset_bottom = -57.0
+text = "[E] Shop"
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1.43671, 11.9532)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_khbxd")
+
+[node name="VendingMachineUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" type="Control" parent="VendingMachineUI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="VendingMachineUI/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -439.0
+offset_top = -299.0
+offset_right = 438.0
+offset_bottom = 298.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonS" type="ColorRect" parent="VendingMachineUI/Control/Panel"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -318.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.41, 0.41, 0.41, 0.619608)
+
+[node name="TextureRect" type="TextureRect" parent="VendingMachineUI/Control/Panel/ButtonS"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 21.0
+offset_right = 144.0
+offset_bottom = 149.0
+texture = ExtResource("2_3xpst")
+
+[node name="TextureRect2" type="TextureRect" parent="VendingMachineUI/Control/Panel/ButtonS"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 21.0
+offset_right = 304.0
+offset_bottom = 149.0
+texture = ExtResource("2_3xpst")
+
+[node name="TextureRect3" type="TextureRect" parent="VendingMachineUI/Control/Panel/ButtonS"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 165.0
+offset_right = 144.0
+offset_bottom = 293.0
+texture = ExtResource("2_3xpst")
+
+[node name="TextureRect4" type="TextureRect" parent="VendingMachineUI/Control/Panel/ButtonS"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 165.0
+offset_right = 304.0
+offset_bottom = 293.0
+texture = ExtResource("2_3xpst")
+
+[node name="TextureRect5" type="TextureRect" parent="VendingMachineUI/Control/Panel/ButtonS"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 309.0
+offset_right = 144.0
+offset_bottom = 437.0
+texture = ExtResource("2_3xpst")
+
+[node name="TextureRect6" type="TextureRect" parent="VendingMachineUI/Control/Panel/ButtonS"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 309.0
+offset_right = 304.0
+offset_bottom = 437.0
+texture = ExtResource("2_3xpst")
+
+[node name="TextureRect7" type="TextureRect" parent="VendingMachineUI/Control/Panel/ButtonS"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 453.0
+offset_right = 144.0
+offset_bottom = 581.0
+texture = ExtResource("2_3xpst")
+
+[node name="TextureRect8" type="TextureRect" parent="VendingMachineUI/Control/Panel/ButtonS"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 453.0
+offset_right = 304.0
+offset_bottom = 581.0
+texture = ExtResource("2_3xpst")
+
+[node name="ColorRect2" type="ColorRect" parent="VendingMachineUI/Control/Panel"]
+layout_mode = 0
+offset_right = 558.0
+offset_bottom = 598.0
+color = Color(0.04, 0.04, 0.04, 0.541176)
+
+[node name="Name" type="Label" parent="VendingMachineUI/Control/Panel/ColorRect2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -191.0
+offset_top = 22.0
+offset_right = 193.0
+offset_bottom = 98.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_saeyp")
+theme_override_font_sizes/font_size = 22
+text = "Coil Reaper Boots"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="catagory" type="Label" parent="VendingMachineUI/Control/Panel/ColorRect2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -263.0
+offset_top = 119.0
+offset_right = 266.0
+offset_bottom = 224.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_saeyp")
+theme_override_font_sizes/font_size = 20
+text = "Rarity: Rare
+
+Type: Footgear 
+Reactive Spring System."
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Item" type="Label" parent="VendingMachineUI/Control/Panel/ColorRect2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -263.0
+offset_top = 231.0
+offset_right = 266.0
+offset_bottom = 399.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_saeyp")
+theme_override_font_sizes/font_size = 100
+text = "🥾"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Instruction" type="Label" parent="VendingMachineUI/Control/Panel/ColorRect2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -263.0
+offset_top = 423.0
+offset_right = 266.0
+offset_bottom = 528.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_saeyp")
+theme_override_font_sizes/font_size = 20
+text = "Double tap jump quickly to reach new heights."
+autowrap_mode = 3
+
+[node name="Description" type="Label" parent="VendingMachineUI/Control/Panel/ColorRect2"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -263.0
+offset_top = 375.0
+offset_right = 266.0
+offset_bottom = 498.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_saeyp")
+theme_override_font_sizes/font_size = 18
+text = "Description:
+Forged from compressed regret and bad life choices. You don’t get a second chance, unless your thumbs earn it."
+autowrap_mode = 3
+
+[node name="Cost" type="Label" parent="VendingMachineUI/Control/Panel/ColorRect2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -191.0
+offset_top = 502.0
+offset_right = 193.0
+offset_bottom = 578.0
+grow_horizontal = 2
+rotation = -0.00614428
+theme_override_fonts/font = ExtResource("3_saeyp")
+theme_override_font_sizes/font_size = 22
+text = "Cost: 15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

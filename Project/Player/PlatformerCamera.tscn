@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://5bunr2xo7vta"]
+
+[ext_resource type="Script" uid="uid://gu182yebf501" path="res://Player/Camera2D.gd" id="1_b3wdn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mluwy"]
+size = Vector2(16, 328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cv4sk"]
+size = Vector2(608, 20)
+
+[node name="Camera2D" type="Camera2D"]
+anchor_mode = 0
+zoom = Vector2(2, 2)
+script = ExtResource("1_b3wdn")
+style_select = 1
+trans_select = 6
+ease_select = 1
+camera_smooth_speed = 0
+scroll_Speed = 125
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-9, 164)
+shape = SubResource("RectangleShape2D_mluwy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(585, 164)
+shape = SubResource("RectangleShape2D_mluwy")
+
+[node name="StaticBody2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(288, -11)
+shape = SubResource("RectangleShape2D_cv4sk")
+
+[node name="TextBox" type="ColorRect" parent="."]
+visible = false
+offset_left = 8.0
+offset_top = 200.0
+offset_right = 568.0
+offset_bottom = 320.0
+color = Color(0, 0.0941176, 0.176471, 0.466667)
+
+[node name="Label" type="Label" parent="TextBox"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 560.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 12
+text = "Notice:
+Bridge Is closes for maintence, each day from 8 pm  to 9 pm.
+
+Skypark Maintence department "
+
+[connection signal="body_entered" from="StaticBody2D" to="." method="_on_static_body_2d_body_entered"]

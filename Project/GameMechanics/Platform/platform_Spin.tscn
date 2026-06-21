@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c4hw8077s13n6"]
+
+[ext_resource type="Texture2D" uid="uid://bcw08eqr5l11a" path="res://Assets/Art/Platform.png" id="1_ccyfh"]
+[ext_resource type="Script" uid="uid://kn5k8t000ehv" path="res://GameMechanics/Platform/platform_spin.gd" id="1_xkse4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smgmm"]
+size = Vector2(64, 16)
+
+[node name="ShootablePlatform" type="AnimatableBody2D" unique_id=1042370592 groups=["platforms"]]
+sync_to_physics = false
+script = ExtResource("1_xkse4")
+
+[node name="Platform" type="Sprite2D" parent="." unique_id=823136444]
+texture_filter = 1
+texture = ExtResource("1_ccyfh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2099295747]
+shape = SubResource("RectangleShape2D_smgmm")

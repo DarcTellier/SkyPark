@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://wuolcx7n767j"]
+
+[ext_resource type="Texture2D" uid="uid://cbt1ewsvpstav" path="res://Assets/Art/LockedDoor.png" id="1_x4nd7"]
+[ext_resource type="PackedScene" uid="uid://bdpb0byg62j6a" path="res://GameMechanics/Doors/door.tscn" id="2_42grv"]
+
+[node name="LockedDoor" type="Node2D"]
+
+[node name="LockedDoor" type="Sprite2D" parent="."]
+texture = ExtResource("1_x4nd7")
+
+[node name="Door" parent="." instance=ExtResource("2_42grv")]

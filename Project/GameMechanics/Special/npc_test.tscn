@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1n1ydx3263wb"]
+
+[ext_resource type="Texture2D" uid="uid://cagjdgjkhd6mx" path="res://Assets/icon.svg" id="1_jduda"]
+[ext_resource type="Script" uid="uid://c885qev0un15q" path="res://GameMechanics/Special/npc_test.gd" id="1_v151e"]
+[ext_resource type="PackedScene" uid="uid://8eeb0x7kjhqf" path="res://interactions/interaction area/interaction_area.tscn" id="2_v151e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v151e"]
+size = Vector2(113, 121)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jduda"]
+radius = 99.1816
+
+[node name="NPCTest" type="CharacterBody2D"]
+script = ExtResource("1_v151e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_v151e")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("1_jduda")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_v151e")]
+action_name = "Talk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_jduda")

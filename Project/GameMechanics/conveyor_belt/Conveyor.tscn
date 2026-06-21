@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5cl8by2sgvu2"]
+
+[ext_resource type="Script" uid="uid://bjpefmmp08ws1" path="res://GameMechanics/conveyor_belt/conveyor.gd" id="1_q4dn2"]
+
+[node name="Conveyor" type="Node2D"]
+position = Vector2(-32, 0)
+script = ExtResource("1_q4dn2")
+
+[node name="end" type="Marker2D" parent="."]
+position = Vector2(1264, 0)

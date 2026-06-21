@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://f74po7k7cr00"]
+
+[ext_resource type="Script" uid="uid://3h2c3d3ur5e6" path="res://GameMechanics/Wall_pushing/push_wall.gd" id="1_o7tyd"]
+[ext_resource type="Texture2D" uid="uid://bcw08eqr5l11a" path="res://Assets/Art/Platform.png" id="1_rvudq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8g3f"]
+size = Vector2(65, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7tyd"]
+size = Vector2(320, 172)
+
+[node name="PushWall" type="Node2D"]
+script = ExtResource("1_o7tyd")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+rotation = 1.5708
+scale = Vector2(5, 5)
+
+[node name="Platform" type="Sprite2D" parent="AnimatableBody2D"]
+texture = ExtResource("1_rvudq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(1.60001, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_o8g3f")
+
+[node name="Area2D" type="Area2D" parent="AnimatableBody2D"]
+rotation = -1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D/Area2D"]
+position = Vector2(-123, 1.52588e-05)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_o7tyd")
+
+[node name="End" type="Marker2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="AnimatableBody2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="AnimatableBody2D/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

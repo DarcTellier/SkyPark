@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2vl27mkf0wnr"]
+
+[ext_resource type="Script" uid="uid://crc3ch227148q" path="res://GameMechanics/Props/picknic_table.gd" id="1_tphui"]
+[ext_resource type="Texture2D" uid="uid://nupb10adknad" path="res://Assets/Art/PicnicTable.png" id="2_tphui"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjo7q"]
+size = Vector2(94, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sdl4u"]
+size = Vector2(126, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kv6cc"]
+size = Vector2(94, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78eoj"]
+size = Vector2(126, 1)
+
+[node name="PicknicTable" type="StaticBody2D" groups=["platforms"]]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_tphui")
+
+[node name="PicnicTable" type="Sprite2D" parent="."]
+position = Vector2(5, -14)
+texture = ExtResource("2_tphui")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, -10)
+shape = SubResource("RectangleShape2D_kjo7q")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(5, 21)
+shape = SubResource("RectangleShape2D_sdl4u")
+one_way_collision = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5, -8.5)
+shape = SubResource("RectangleShape2D_kv6cc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5, 22.5)
+shape = SubResource("RectangleShape2D_78eoj")

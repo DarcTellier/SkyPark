@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnabx2c7qq6wt"]
+
+[ext_resource type="Script" uid="uid://c7svjy68nt7ge" path="res://addons/webradio/node_types/webradiostreamplayer2d.gd" id="1_2p2ln"]
+
+[sub_resource type="AudioStream" id="AudioStream_k5drj"]
+
+[node name="WebRadioStreamPlayer" type="AudioStreamPlayer"]
+editor_description = "https://stream.subcity.org/listen
+
+https://s2.radio.co/s2b2b68744/listen
+
+https://sohoradiomusic.doughunt.co.uk:8010/320mp3
+
+Hitsujikai Radio
+https://streaming.radio.co/se4a8e6a93/listen
+
+
+russian
+https://free.rcast.net/282572
+
+Gold Instrumental
+https://free.rcast.net/200273
+https://free.rcast.net/200273"
+stream = SubResource("AudioStream_k5drj")
+volume_db = -4.875
+script = ExtResource("1_2p2ln")
+url = "https://free.rcast.net/200273"
