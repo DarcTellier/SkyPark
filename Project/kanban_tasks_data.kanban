@@ -11,6 +11,7 @@
 			"uuid": "3c73aebb-6b77-4faf-9bfa-e4bfe5d4e4d2",
 			"title": "Todo",
 			"tasks": [
+				"be7a356a-4aec-41b8-947d-f5952a6727fc",
 				"1624cb51-12dc-49b2-9331-db4070a5de11",
 				"f6b54d09-9164-4115-a965-c83312595aed",
 				"ae415a72-6a78-4776-bd4a-bf94266f67b7",
@@ -27,27 +28,31 @@
 				"e36b46af-bb49-47bb-8208-5a9dbbab0316",
 				"a855bef9-caae-4ffc-b668-b3b246df7f83",
 				"b67b0d97-796e-4c5d-833c-2b2ad8627e3e",
-				"0b997293-c044-4408-8ae5-d794da8598e4",
-				"c110b449-9870-4452-9ff6-43dff9f1fe74",
 				"7e0fe21c-d64f-41d1-99cf-e7d210f7943d",
-				"c4d11d90-e375-40fc-ba0f-18ac46be40ad",
-				"5b6b8a1e-a85f-4a8f-b31a-3d4da249f993",
-				"9318f267-c4b6-4d5a-a13a-26acf8164b03",
-				"3b1d7153-0717-47a7-9ee4-772129a8ee21"
+				"9318f267-c4b6-4d5a-a13a-26acf8164b03"
 			]
 		},
 		{
 			"uuid": "d86f7127-6204-4d78-9636-e131877fdc38",
 			"title": "Doing",
 			"tasks": [
-				"a587d3ca-8a58-4381-968d-e328561bfb3e",
-				"be7a356a-4aec-41b8-947d-f5952a6727fc"
+				"247892c5-0a40-493a-9f0e-05bb09b2f890",
+				"5f79b452-8778-4319-8792-20c6aa6a7430",
+				"8d7aec3e-7447-4c1a-8f53-4b33ee26d3d7",
+				"a2602542-ef3c-4fe2-be16-dc7533f244b1",
+				"00521fef-b380-4df6-bb6f-52639f85a6f5",
+				"c113c128-e4d8-478d-8035-21587131139b",
+				"9c0530bc-1e27-4d4f-8b12-d89c41aba42a"
 			]
 		},
 		{
 			"uuid": "ac5c2b6b-2961-422f-a1a9-82991b6fcfc6",
 			"title": "Done",
 			"tasks": [
+				"5930ffef-c558-460a-aa26-5f3f4b827b23",
+				"559086cb-0b06-44d7-b54b-bd67a2775278",
+				"1ac75d67-5dd2-4d75-8772-63a8d2b254f7",
+				"a587d3ca-8a58-4381-968d-e328561bfb3e",
 				"45d21b18-9c40-4fe7-9de1-874d786acc3f",
 				"c01f20c4-adcd-42ef-8b71-e15c82b24687",
 				"e84d8b99-30e3-437d-b4f6-10a3c8ddbd4c",
@@ -266,20 +271,6 @@
 			"steps": []
 		},
 		{
-			"uuid": "0b997293-c044-4408-8ae5-d794da8598e4",
-			"title": "Imstuck Bro ",
-			"description": "",
-			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
-			"steps": []
-		},
-		{
-			"uuid": "c110b449-9870-4452-9ff6-43dff9f1fe74",
-			"title": "ImStuckBro Skit with owl",
-			"description": "",
-			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
-			"steps": []
-		},
-		{
 			"uuid": "7e0fe21c-d64f-41d1-99cf-e7d210f7943d",
 			"title": "SandPit",
 			"description": "",
@@ -290,20 +281,6 @@
 			"uuid": "8e48ff26-f1c9-4a2d-b69b-39a95082f41a",
 			"title": "ctrl alt F4 : gives you an achievement in this game  on pc ",
 			"description": "",
-			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
-			"steps": []
-		},
-		{
-			"uuid": "c4d11d90-e375-40fc-ba0f-18ac46be40ad",
-			"title": "Spining room ",
-			"description": " castle vanian 4  \n",
-			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
-			"steps": []
-		},
-		{
-			"uuid": "5b6b8a1e-a85f-4a8f-b31a-3d4da249f993",
-			"title": "SURVEYOR SPRAY PAINT ON THE WALL:",
-			"description": "“SEA LEVEL”\n→ Arrow pointing at the floor\n🖌️ “Congratulations. You’re halfway there.”\n🖌️ “Now the real climb begins.”\n\n\nPeep:\n\n“W-we’re still underground?! B-but I packed a towel for the beach!”\n“I thought 0 meant FREEDOM!!”\n\nWant to include some fake graffiti from previous climbers like:\n\n“Sea level my butt.”\n“I saw the sky once… in a fever dream.”\n“-0m club. No t-shirts. Just trauma.”",
 			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
 			"steps": []
 		},
@@ -343,13 +320,6 @@
 			"steps": []
 		},
 		{
-			"uuid": "3b1d7153-0717-47a7-9ee4-772129a8ee21",
-			"title": "Notes platforms can go through walls but you cant",
-			"description": "",
-			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
-			"steps": []
-		},
-		{
 			"uuid": "be7a356a-4aec-41b8-947d-f5952a6727fc",
 			"title": "platforms sliding in out of walls",
 			"description": "from tiny toon nes \n",
@@ -359,6 +329,76 @@
 		{
 			"uuid": "a587d3ca-8a58-4381-968d-e328561bfb3e",
 			"title": "down to crouch",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "559086cb-0b06-44d7-b54b-bd67a2775278",
+			"title": "shootable platforms",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "5930ffef-c558-460a-aa26-5f3f4b827b23",
+			"title": "fix that one pipe that that crashes the game ",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "00521fef-b380-4df6-bb6f-52639f85a6f5",
+			"title": "fix holding down on pipe animation",
+			"description": "Create a new animation for when player is crouching\n",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "5f79b452-8778-4319-8792-20c6aa6a7430",
+			"title": "Shoot Player",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "1ac75d67-5dd2-4d75-8772-63a8d2b254f7",
+			"title": "shootable blocks",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "8d7aec3e-7447-4c1a-8f53-4b33ee26d3d7",
+			"title": "Player pick up ammo",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "a2602542-ef3c-4fe2-be16-dc7533f244b1",
+			"title": "hold down shoot button for switches",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "247892c5-0a40-493a-9f0e-05bb09b2f890",
+			"title": "Shooting creates flash and shot sound",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "c113c128-e4d8-478d-8035-21587131139b",
+			"title": "hitting stuff makes sounds",
+			"description": "",
+			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
+			"steps": []
+		},
+		{
+			"uuid": "9c0530bc-1e27-4d4f-8b12-d89c41aba42a",
+			"title": "import sprouty for new dialogue system",
 			"description": "",
 			"category": "290e3a3c-bacd-472b-9d74-31c0641eacda",
 			"steps": []
