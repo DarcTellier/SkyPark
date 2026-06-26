@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bpar616qs1mrl"]
+
+[ext_resource type="Script" uid="uid://dpkbsc67ftlev" path="res://GameMechanics/Guns/Reations/Base/copy_gun_reaction.gd" id="1_tmtlr"]
+
+[node name="CopyGunReaction" type="Node" unique_id=648769431]
+script = ExtResource("1_tmtlr")

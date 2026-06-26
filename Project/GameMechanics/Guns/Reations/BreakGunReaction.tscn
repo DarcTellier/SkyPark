@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bx3dg8pwd8buh"]
+
+[ext_resource type="Script" uid="uid://b3bfhpw011r65" path="res://GameMechanics/Guns/Reations/Base/break_gun_reaction.gd" id="1_fqopx"]
+
+[node name="BreakGunReaction" type="Node" unique_id=99856174]
+script = ExtResource("1_fqopx")

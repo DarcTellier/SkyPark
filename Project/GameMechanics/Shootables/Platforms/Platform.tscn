@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dgp536ymjdyk4" path="res://GameMechanics/Shootables/Platforms/platform.gd" id="1_db0fe"]
 [ext_resource type="Texture2D" uid="uid://bcw08eqr5l11a" path="res://Assets/Art/Platform.png" id="1_rr5yv"]
 [ext_resource type="PackedScene" uid="uid://bn1vi4qehr5yk" path="res://GameMechanics/Guns/Reations/SpinGunReaction.tscn" id="3_iuve6"]
+[ext_resource type="PackedScene" uid="uid://bpar616qs1mrl" path="res://GameMechanics/Guns/Reations/CopyGunReaction.tscn" id="3_nt0ya"]
+[ext_resource type="PackedScene" uid="uid://bx3dg8pwd8buh" path="res://GameMechanics/Guns/Reations/BreakGunReaction.tscn" id="4_qtdfx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smgmm"]
 size = Vector2(64, 16)
@@ -19,4 +21,9 @@ texture = ExtResource("1_rr5yv")
 
 [node name="GunReactions" type="Node" parent="." unique_id=1442736781]
 
+[node name="CopyGunReaction" parent="GunReactions" unique_id=648769431 instance=ExtResource("3_nt0ya")]
+copy_scene = null
+
 [node name="SpinGunReaction" parent="GunReactions" unique_id=1014910438 instance=ExtResource("3_iuve6")]
+
+[node name="BreakGunReaction" parent="GunReactions" unique_id=99856174 instance=ExtResource("4_qtdfx")]
