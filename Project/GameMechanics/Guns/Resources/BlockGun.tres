@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GunData" format=3 uid="uid://gaaof34l72ou"]
+
+[ext_resource type="Script" uid="uid://bgep6dulod3h1" path="res://GameMechanics/Guns/base/GunData.gd" id="1_5htyf"]
+
+[resource]
+script = ExtResource("1_5htyf")
+gun_name = "Block"
+metadata/_custom_type_script = "uid://bgep6dulod3h1"

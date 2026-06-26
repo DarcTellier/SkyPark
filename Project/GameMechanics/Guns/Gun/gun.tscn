@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cjox1cremqwe7"]
+
+[ext_resource type="Script" uid="uid://c85ev3utmsc6m" path="res://GameMechanics/Guns/base/GunManager.gd" id="1_pxc5x"]
+[ext_resource type="Script" uid="uid://bgep6dulod3h1" path="res://GameMechanics/Guns/base/GunData.gd" id="2_dl8qj"]
+[ext_resource type="Resource" uid="uid://gaaof34l72ou" path="res://GameMechanics/Guns/Resources/BlockGun.tres" id="3_eqh8y"]
+[ext_resource type="Resource" uid="uid://m0alhnhu04o3" path="res://GameMechanics/Guns/Resources/BreakGun.tres" id="4_7lteb"]
+[ext_resource type="Resource" uid="uid://dihord5vyr5nj" path="res://GameMechanics/Guns/Resources/SpinGun.tres" id="5_6afxe"]
+
+[node name="Gun" type="Node2D" unique_id=2001587476]
+script = ExtResource("1_pxc5x")
+guns = Array[ExtResource("2_dl8qj")]([ExtResource("3_eqh8y"), ExtResource("4_7lteb"), ExtResource("5_6afxe")])

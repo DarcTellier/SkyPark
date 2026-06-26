@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://biquke7vw2dhd"]
+
+[ext_resource type="Script" uid="uid://dgp536ymjdyk4" path="res://GameMechanics/Shootables/Platforms/platform.gd" id="1_db0fe"]
+[ext_resource type="Texture2D" uid="uid://bcw08eqr5l11a" path="res://Assets/Art/Platform.png" id="1_rr5yv"]
+[ext_resource type="PackedScene" uid="uid://bn1vi4qehr5yk" path="res://GameMechanics/Guns/Reations/SpinGunReaction.tscn" id="3_iuve6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smgmm"]
+size = Vector2(64, 16)
+
+[node name="Platform" type="AnimatableBody2D" unique_id=340413263 groups=["platforms"]]
+script = ExtResource("1_db0fe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1811857848]
+shape = SubResource("RectangleShape2D_smgmm")
+
+[node name="Platform" type="Sprite2D" parent="." unique_id=1902463963]
+texture_filter = 1
+texture = ExtResource("1_rr5yv")
+
+[node name="GunReactions" type="Node" parent="." unique_id=1442736781]
+
+[node name="SpinGunReaction" parent="GunReactions" unique_id=1014910438 instance=ExtResource("3_iuve6")]

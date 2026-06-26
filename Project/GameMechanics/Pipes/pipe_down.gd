@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 		if player_reff.name == "Player":
 			if player_reff.down_press == true && enter_pipe == false:
 				enter_pipe = true
-				print(pipe_name)
+				
 				in_the_pipe()
 				
 				

@@ -182,15 +182,3 @@ func camera_room_correction_y():
 	var pos = int(player_position.y + (22 *16))/(352)
 	var field ="position:y"
 	
-
-
-	
-	
-	
-	
-
-# for detecting when player is wedge between 2 bodies
-func _on_static_body_2d_body_entered(body):
-	if body.name == "Player":
-		print("player sucks")
-	pass # Replace with function body.

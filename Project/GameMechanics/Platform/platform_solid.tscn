@@ -1,16 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bisyktg0qg8c5"]
+[gd_scene format=3 uid="uid://bisyktg0qg8c5"]
 
 [ext_resource type="Texture2D" uid="uid://bcw08eqr5l11a" path="res://Assets/Art/Platform.png" id="2_4ggmb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smgmm"]
 size = Vector2(64, 16)
 
-[node name="Platform_Solid" type="AnimatableBody2D" groups=["platforms"]]
-position = Vector2(8, 0)
+[node name="Platform_Solid" type="AnimatableBody2D" unique_id=340413263 groups=["platforms"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1811857848]
 shape = SubResource("RectangleShape2D_smgmm")
 
-[node name="Platform" type="Sprite2D" parent="."]
+[node name="Platform" type="Sprite2D" parent="." unique_id=1902463963]
 texture_filter = 1
 texture = ExtResource("2_4ggmb")

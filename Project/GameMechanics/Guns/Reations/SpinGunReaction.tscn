@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bn1vi4qehr5yk"]
+
+[ext_resource type="Script" uid="uid://ctr3n00qlsm5s" path="res://GameMechanics/Guns/Reations/Base/spin_gun_reaction.gd" id="1_6gdbx"]
+
+[node name="SpinGunReaction" type="Node" unique_id=1014910438]
+script = ExtResource("1_6gdbx")

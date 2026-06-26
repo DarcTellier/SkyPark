@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://2tfhwvoenkcu"]
+[gd_scene format=3 uid="uid://2tfhwvoenkcu"]
 
 [ext_resource type="Script" uid="uid://cjtkigu1quttd" path="res://GameMechanics/Pipes/pipe_down.gd" id="1_0eqlv"]
 [ext_resource type="Texture2D" uid="uid://ch08wei0ssrcy" path="res://Assets/Art/Orange Pipe.png" id="2_hvcam"]
@@ -12,38 +12,38 @@ size = Vector2(24, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1uqvy"]
 size = Vector2(22, 2)
 
-[node name="Pipe_down" type="StaticBody2D"]
+[node name="Pipe_down" type="StaticBody2D" unique_id=1495379024]
 z_index = -1
 scale = Vector2(2, 2)
 script = ExtResource("1_0eqlv")
 metadata/_edit_horizontal_guides_ = [-36.0]
 
-[node name="OrangePipe" type="Sprite2D" parent="."]
+[node name="OrangePipe" type="Sprite2D" parent="." unique_id=238538907]
 texture = ExtResource("2_hvcam")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1727309521]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_78010")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1833189676]
 position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_arayy")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=864759024]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=925404165]
 position = Vector2(0, -18)
 shape = SubResource("RectangleShape2D_1uqvy")
 
-[node name="Location_pos" type="Marker2D" parent="."]
+[node name="Location_pos" type="Marker2D" parent="." unique_id=837456449]
 z_index = -1
 position = Vector2(0, -36)
 
-[node name="InThePipeTimer" type="Timer" parent="."]
+[node name="InThePipeTimer" type="Timer" parent="." unique_id=133509338]
 wait_time = 1.25
 one_shot = true
 
-[node name="OuThePipeTimer" type="Timer" parent="."]
+[node name="OuThePipeTimer" type="Timer" parent="." unique_id=1107599447]
 wait_time = 1.25
 one_shot = true
 
