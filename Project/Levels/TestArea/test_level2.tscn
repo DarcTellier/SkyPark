@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://m0alhnhu04o3" path="res://GameMechanics/Guns/Resources/BreakGun.tres" id="9_shscb"]
 [ext_resource type="PackedScene" uid="uid://lbkaoij5gdtj" path="res://GameMechanics/OrbitingPlatform/platform.tscn" id="10_oh7an"]
 [ext_resource type="Resource" uid="uid://d3rj5qt3xxgsm" path="res://GameMechanics/Guns/Resources/CopyGun.tres" id="10_shscb"]
+[ext_resource type="Resource" uid="uid://c6ao24m0kga6c" path="res://GameMechanics/Guns/Resources/StopGun.tres" id="11_cqmnf"]
 [ext_resource type="PackedScene" uid="uid://dwuaep5q40l2r" path="res://GameMechanics/Platform/platform_one_way_collision.tscn" id="11_kn848"]
 [ext_resource type="PackedScene" uid="uid://qk401y4swsdx" path="res://GameMechanics/Platform/Platform_two_way_collision.tscn" id="12_ifc8k"]
 [ext_resource type="PackedScene" uid="uid://btodagme3g01l" path="res://GameMechanics/Special/super_elevator.tscn" id="13_4v86x"]
@@ -457,7 +458,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="Gun" parent="." unique_id=2001587476 instance=ExtResource("5_ifcuu")]
-guns = Array[ExtResource("6_7bny1")]([ExtResource("7_ifcuu"), ExtResource("8_c34ap"), ExtResource("9_shscb"), ExtResource("10_shscb")])
+guns = Array[ExtResource("6_7bny1")]([ExtResource("7_ifcuu"), ExtResource("8_c34ap"), ExtResource("9_shscb"), ExtResource("10_shscb"), ExtResource("11_cqmnf")])
 block_scene = ExtResource("5_7bny1")
 
 [node name="WhiteBlock" parent="." unique_id=1058137798 instance=ExtResource("5_7bny1")]
@@ -471,40 +472,40 @@ position = Vector2(-976, 2672)
 position = Vector2(0, -2344)
 
 [node name="ElevatorPlatform" parent="Elevator2" unique_id=1016378212 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -2248)
+position = Vector2(0, -750)
 
 [node name="ElevatorPlatform2" parent="Elevator2" unique_id=1943121726 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -98)
+position = Vector2(0, -946)
 
 [node name="ElevatorPlatform3" parent="Elevator2" unique_id=814066312 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -294)
+position = Vector2(0, -1142)
 
 [node name="ElevatorPlatform4" parent="Elevator2" unique_id=1231145623 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -488)
+position = Vector2(0, -1336)
 
 [node name="ElevatorPlatform5" parent="Elevator2" unique_id=1291688643 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -684)
+position = Vector2(0, -1532)
 
 [node name="ElevatorPlatform6" parent="Elevator2" unique_id=1678186410 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -880)
+position = Vector2(0, -1728)
 
 [node name="ElevatorPlatform7" parent="Elevator2" unique_id=1101940001 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -1074)
+position = Vector2(0, -1922)
 
 [node name="ElevatorPlatform8" parent="Elevator2" unique_id=432724431 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -1270)
+position = Vector2(0, -2118)
 
 [node name="ElevatorPlatform9" parent="Elevator2" unique_id=2104132132 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -1466)
+position = Vector2(0, -2314)
 
 [node name="ElevatorPlatform10" parent="Elevator2" unique_id=1845711856 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -1660)
+position = Vector2(0, -162)
 
 [node name="ElevatorPlatform11" parent="Elevator2" unique_id=1561018844 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -1856)
+position = Vector2(0, -358)
 
 [node name="ElevatorPlatform12" parent="Elevator2" unique_id=1907036297 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -2052)
+position = Vector2(0, -554)
 
 [node name="ConveyorBelt" parent="." unique_id=435414731 instance=ExtResource("8_shscb")]
 z_index = -2
@@ -515,22 +516,22 @@ position = Vector2(304, 184)
 rotation_duration = 3.0
 
 [node name="Platform" parent="OrbitingPlatform" unique_id=2122479245 instance=ExtResource("10_oh7an")]
-position = Vector2(-58.778526, 80.9017)
+position = Vector2(-64.27876, -76.60445)
 
 [node name="Platform_one_way_collision2" parent="OrbitingPlatform" unique_id=1225205754 instance=ExtResource("11_kn848")]
-position = Vector2(-95.10565, -30.9017)
+position = Vector2(52.99193, -84.80481)
 script = SubResource("GDScript_lrol0")
 
 [node name="Platform_one_way_collision3" parent="OrbitingPlatform" unique_id=1407424563 instance=ExtResource("11_kn848")]
-position = Vector2(3.2133688e-11, -100)
+position = Vector2(97.02957, 24.19219)
 script = SubResource("GDScript_lrol0")
 
 [node name="Platform_one_way_collision4" parent="OrbitingPlatform" unique_id=139159527 instance=ExtResource("11_kn848")]
-position = Vector2(95.10565, -30.9017)
+position = Vector2(6.9756474, 99.75641)
 script = SubResource("GDScript_lrol0")
 
 [node name="Platform_one_way_collision5" parent="OrbitingPlatform" unique_id=1231774542 instance=ExtResource("11_kn848")]
-position = Vector2(58.778526, 80.9017)
+position = Vector2(-92.71838, 37.46066)
 script = SubResource("GDScript_lrol0")
 
 [node name="OneWayPlatforms" type="Node2D" parent="." unique_id=1620288672]
@@ -669,7 +670,6 @@ scale = Vector2(1, 0.979167)
 curve = SubResource("Curve2D_7hwld")
 script = SubResource("GDScript_k7ebw")
 speed = 0.1
-direction = false
 
 [node name="MovingPlatform2" parent="MovingPlatforms" unique_id=1385898269 instance=ExtResource("23_reylm")]
 position = Vector2(-1608, -288)
@@ -699,14 +699,12 @@ position = Vector2(-1608, -288)
 curve = SubResource("Curve2D_g6ttx")
 script = SubResource("GDScript_xrj21")
 speed = 0.2
-direction = false
 
 [node name="MovingPlatform6" parent="MovingPlatforms" unique_id=1682234654 instance=ExtResource("23_reylm")]
 position = Vector2(-1608, -288)
 curve = SubResource("Curve2D_782gx")
 script = SubResource("GDScript_655o8")
 speed = 0.1
-direction = false
 
 [node name="MovingPlatform7" parent="MovingPlatforms" unique_id=1145512755 instance=ExtResource("23_reylm")]
 position = Vector2(-1608, -288)
@@ -742,39 +740,6 @@ position = Vector2(1432, 176)
 
 [node name="Platform" parent="." unique_id=340413263 instance=ExtResource("30_lra6s")]
 position = Vector2(2448, 256)
-
-[connection signal="body_entered" from="TileMapLayer/Coin" to="TileMapLayer/Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69391" to="TileMapLayer/@Area2D@69391" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69392" to="TileMapLayer/@Area2D@69392" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69393" to="TileMapLayer/@Area2D@69393" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69394" to="TileMapLayer/@Area2D@69394" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69395" to="TileMapLayer/@Area2D@69395" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69396" to="TileMapLayer/@Area2D@69396" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69397" to="TileMapLayer/@Area2D@69397" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69398" to="TileMapLayer/@Area2D@69398" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69399" to="TileMapLayer/@Area2D@69399" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69400" to="TileMapLayer/@Area2D@69400" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69401" to="TileMapLayer/@Area2D@69401" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69402" to="TileMapLayer/@Area2D@69402" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69403" to="TileMapLayer/@Area2D@69403" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69404" to="TileMapLayer/@Area2D@69404" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69405" to="TileMapLayer/@Area2D@69405" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69406" to="TileMapLayer/@Area2D@69406" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69407" to="TileMapLayer/@Area2D@69407" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69408" to="TileMapLayer/@Area2D@69408" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69409" to="TileMapLayer/@Area2D@69409" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69410" to="TileMapLayer/@Area2D@69410" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69411" to="TileMapLayer/@Area2D@69411" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69412" to="TileMapLayer/@Area2D@69412" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69413" to="TileMapLayer/@Area2D@69413" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/Ladder" to="TileMapLayer/Ladder" method="_on_body_entered"]
-[connection signal="body_exited" from="TileMapLayer/Ladder" to="TileMapLayer/Ladder" method="_on_body_exited"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69415" to="TileMapLayer/@Area2D@69415" method="_on_body_entered"]
-[connection signal="body_exited" from="TileMapLayer/@Area2D@69415" to="TileMapLayer/@Area2D@69415" method="_on_body_exited"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69416" to="TileMapLayer/@Area2D@69416" method="_on_body_entered"]
-[connection signal="body_exited" from="TileMapLayer/@Area2D@69416" to="TileMapLayer/@Area2D@69416" method="_on_body_exited"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@69417" to="TileMapLayer/@Area2D@69417" method="_on_body_entered"]
-[connection signal="body_exited" from="TileMapLayer/@Area2D@69417" to="TileMapLayer/@Area2D@69417" method="_on_body_exited"]
 
 [editable path="Elevator2"]
 [editable path="SuperElevator"]

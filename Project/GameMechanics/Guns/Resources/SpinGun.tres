@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_sstok")
 gun_name = "Spin"
+consumes_ammo = false
 metadata/_custom_type_script = "uid://bgep6dulod3h1"

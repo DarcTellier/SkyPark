@@ -1,32 +1,46 @@
 extends Node
 
 @export var target_path: NodePath = "../.."
+@export var spin_speed := 180.0
 
-@export var use_tween := true
-@export var tween_time := 0.35
-@export var spin_degrees := 180.0
-
-var tween: Tween
+var target: Node2D
+var spinning := false
+var direction := 1
 
 
-func react_to_gun(_hit_position: Vector2, gun: GunData, _gun_manager: Node = null) -> bool:
+func _ready() -> void:
+	target = get_node_or_null(target_path)
+
+
+func _process(delta: float) -> void:
+	if not spinning:
+		return
+
+	if target == null:
+		return
+
+	target.rotation_degrees += spin_speed * direction * delta
+
+
+func react_to_gun(
+	_hit_position: Vector2,
+	gun: GunData,
+	_gun_manager: Node = null,
+	mouse_button: int = MOUSE_BUTTON_LEFT
+) -> bool:
 	if gun.gun_name != "Spin":
 		return false
 
-	var target := get_node_or_null(target_path)
+	if mouse_button == MOUSE_BUTTON_LEFT:
+		spinning = true
+		direction = 1
 
-	if target == null:
-		return false
-
-	if tween:
-		tween.kill()
-
-	var target_rotation = target.rotation_degrees + spin_degrees
-
-	if use_tween:
-		tween = create_tween()
-		tween.tween_property(target, "rotation_degrees", target_rotation, tween_time)
-	else:
-		target.rotation_degrees = target_rotation
+	if mouse_button == MOUSE_BUTTON_RIGHT:
+		spinning = true
+		direction = -1
 
 	return true
+
+
+func stop_spinning() -> void:
+	spinning = false

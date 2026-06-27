@@ -48,12 +48,12 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("copy_object"):
-		copy_object_at_mouse()
+	if event.is_action_pressed("shoot"):
+		fire_current_gun(MOUSE_BUTTON_LEFT)
 		return
 
-	if event.is_action_pressed("shoot"):
-		fire_current_gun()
+	if event.is_action_pressed("alt_shoot"):
+		fire_current_gun(MOUSE_BUTTON_RIGHT)
 		return
 
 	if event.is_action_pressed("gun_1"):
@@ -160,25 +160,39 @@ func disable_ghost_collision(node: Node) -> void:
 
 
 
-func fire_current_gun() -> void:
+func fire_current_gun(mouse_button: int = MOUSE_BUTTON_LEFT) -> void:
 	if not can_fire():
 		return
 
 	var current_gun := get_current_gun()
 	var mouse_pos := get_global_mouse_position()
 
-	spend_ammo(current_gun.ammo_cost)
+	# Copy Gun special controls
+	if current_gun.gun_name == "Copy":
+		if mouse_button == MOUSE_BUTTON_RIGHT:
+			copy_object_at_mouse()
+			return
+
+		if mouse_button == MOUSE_BUTTON_LEFT:
+			if current_gun.consumes_ammo:
+				spend_ammo(current_gun.ammo_cost)
+
+			can_shoot = false
+			fire_copy_gun(mouse_pos)
+			await start_cooldown(current_gun)
+			return
+
+	if current_gun.consumes_ammo:
+		spend_ammo(current_gun.ammo_cost)
+
 	can_shoot = false
 
 	match current_gun.gun_name:
 		"Block":
 			fire_block_gun(mouse_pos)
 
-		"Copy":
-			fire_copy_gun(mouse_pos)
-
 		_:
-			fire_reaction_gun(mouse_pos, current_gun)
+			fire_reaction_gun(mouse_pos, current_gun, mouse_button)
 
 	await start_cooldown(current_gun)
 
@@ -193,24 +207,17 @@ func copy_object_at_mouse() -> void:
 		return
 
 	var mouse_pos := get_global_mouse_position()
+	fire_reaction_gun(mouse_pos, current_gun, MOUSE_BUTTON_RIGHT)
+
+
+func fire_reaction_gun(mouse_pos: Vector2, current_gun: GunData, mouse_button: int = MOUSE_BUTTON_LEFT) -> void:
 	var hits := get_hits_at_position(mouse_pos)
 
 	for hit in hits:
 		var collider = hit.collider
 
 		if collider.has_method("shot"):
-			collider.shot(mouse_pos, current_gun, self)
-			return
-
-
-func fire_reaction_gun(mouse_pos: Vector2, current_gun: GunData) -> void:
-	var hits := get_hits_at_position(mouse_pos)
-
-	for hit in hits:
-		var collider = hit.collider
-
-		if collider.has_method("shot"):
-			collider.shot(mouse_pos, current_gun, self)
+			collider.shot(mouse_pos, current_gun, self, mouse_button)
 			return
 
 func fire_block_gun(mouse_pos: Vector2) -> void:
@@ -266,7 +273,7 @@ func can_fire() -> bool:
 
 	var current_gun := get_current_gun()
 
-	if ammo < current_gun.ammo_cost:
+	if current_gun.consumes_ammo and ammo < current_gun.ammo_cost:
 		return false
 
 	return true
