@@ -1,184 +1,115 @@
 extends Camera2D
 
-var player_position
-var screen_size
-var first_camera_correction = true
+@export var player_path: NodePath
 
+@export_category("Rooms")
+@export var room_width := 576.0 # 36 * 16
+@export var room_height := 352.0 # 22 * 16
 
-
-@export_category("CameraStyle")
-@export_enum("static","dynamic","follow","scroll") var style_select
-var cam_move_style_choice = ["static","dynamic", "follow","scroll"]
-var cam_move_style_select
+@export_category("Camera Style")
+@export_enum("static", "dynamic", "follow", "scroll")
+var style_select := 0
 
 @export_category("Dynamic")
-@export var start_offset = -116
-@export var trans_speed = 0.5
+@export var trans_speed := 0.5
 
-@export_enum("TRANS_BACK","TRANS_BOUNCE","TRANS_CIRC","TRANS_CUBIC","TRANS_ELASTIC","TRANS_EXPO","TRANS_LINEAR","TRANS_QUAD","TRANS_QUART","TRANS_QUINT","TRANS_SINE") var trans_select
-@export_enum("EASE_IN","EASE_IN_OUT","EASE_OUT","EASE_OUT_IN") var ease_select
+@export_category("Follow")
+@export var follow_offset := Vector2.ZERO
 
+@export_category("Auto Scroll")
+@export_enum("up", "down", "left", "right")
+var scroll_direction := 3
+@export var scroll_speed := 50.0
 
-
-
-@export_category("CAMERAFOLLOW")
-@export var camera_smooth_speed = 1
-@export var camera_smooth_toggle = true
-@export var offset_position = Vector2 (0,16) 
-
-
-@export_category("AUTOSCROLL")
-@export_enum("up","down","left","right","up_left", "up_right", "down_left", "down_right") var scroll_direction = 3 
-@export var scroll_Speed = 50 # 150 should be the fastest
-
- 
+var player: Node2D
+var current_room := Vector2i.ZERO
+var tween: Tween
 
 
-func _ready():
-	screen_size = get_viewport_rect().size
-	get_player_position()
-	
-	
+func _ready() -> void:
+	player = get_node_or_null(player_path)
 
-	
-func _process(delta):
-	get_player_position()
-	MoveCam(delta)
+	if player == null:
+		player = get_parent().get_node_or_null("Player")
 
+	if player == null:
+		print("Camera: No player found.")
+		return
 
-
-func get_player_position():
-	player_position = get_parent().get_node("Player").global_position
-	
- 
+	snap_to_player_room()
 
 
-func MoveCam(delta):
-	
-	cam_move_style_select = cam_move_style_choice[style_select] 
-	
-	
-	match cam_move_style_select:
-		"static":static_cam_movement()
-		"dynamic":dynamic_cam_movement()
-		"follow":follow_player_movement()
-		"scroll":scroll_cam(delta)
-		
-		_:
-			static_cam_movement()
-			print("error cam movement")
-	
-	
+func _process(delta: float) -> void:
+	if player == null:
+		return
+
+	match style_select:
+		0:
+			static_camera()
+		1:
+			dynamic_camera()
+		2:
+			follow_camera()
+		3:
+			scroll_camera(delta)
 
 
-
-func static_cam_movement():
-	
-
-	if player_position.y < position.y:
-		position.y -= (screen_size.y /2) 
-		offset.y +=4
-	
-	if player_position.y > position.y + (screen_size.y /2):
-		position.y += (screen_size.y /2)
-		offset.y -=4
-		
-	if player_position.x < position.x:
-		position.x -= (screen_size.x /2)
-	
-	if player_position.x > position.x +(screen_size.x /2):
-		position.x += (screen_size.x /2)
-		
-	camera_room_correction_x()
-	camera_room_correction_y()
-	
+func get_player_room() -> Vector2i:
+	return Vector2i(
+		floori(player.global_position.x / room_width),
+		floori(player.global_position.y / room_height)
+	)
 
 
-func dynamic_cam_movement():
+func get_room_camera_position(room: Vector2i) -> Vector2:
+	return Vector2(
+		room.x * room_width,
+		room.y * room_height
+	)
 
 
-
-	if player_position.y < position.y:
-		position.y -= (screen_size.y /2) 
-		offset.y +=4
-	
-	if player_position.y > position.y + (screen_size.y /2):
-		position.y += (screen_size.y /2) 
-		offset.y -=4
-	
-	
-		
-	if player_position.x < position.x:
-		var pos = position.x - (screen_size.x /2)
-		var field ="position:x"
-		camera_tween_transition(field,pos)
-		
-	if player_position.x > position.x +(screen_size.x /2):
-		var pos = position.x + (screen_size.x /2)
-		var field ="position:x"
-		camera_tween_transition(field,pos)
-	
-	
-	camera_room_correction_x()
-	camera_room_correction_y()	
-	
+func snap_to_player_room() -> void:
+	current_room = get_player_room()
+	global_position = get_room_camera_position(current_room)
 
 
+func static_camera() -> void:
+	var new_room := get_player_room()
 
-func camera_tween_transition(field,pos):
-	var tween : Tween
+	if new_room == current_room:
+		return
+
+	current_room = new_room
+	global_position = get_room_camera_position(current_room)
+
+
+func dynamic_camera() -> void:
+	var new_room := get_player_room()
+
+	if new_room == current_room:
+		return
+
+	current_room = new_room
+	var target_pos := get_room_camera_position(current_room)
+
+	if tween:
+		tween.kill()
+
 	tween = create_tween()
-	
-	var trans = TransEaseSelect.select_trans(trans_select)
-	var ease = TransEaseSelect.select_ease(ease_select)
-	
-	tween.tween_property( self, field, pos, trans_speed).set_trans(trans).set_ease(ease_select)
-	
+	tween.tween_property(self, "global_position", target_pos, trans_speed)
 
 
+func follow_camera() -> void:
+	global_position = player.global_position + follow_offset
 
 
-		
-	
-func follow_player_movement():
-	#for in town or special areas 
-	# make sure to put in variables to control camera positions
-	camera_smooth_speed =1
-	camera_smooth_toggle = true
-	
-	position = player_position
-	
-	position.x = player_position.x -(screen_size.x /4)
-	#position.y = player_position.y -(screen_size.y /5) + offset_position.y 
-	
-#	camera_room_correction_y()
-
-
-
-func scroll_cam(delta):
-	
+func scroll_camera(delta: float) -> void:
 	match scroll_direction:
-		3: position.x += scroll_Speed * delta 
-	
-	
-
-
-
-# camera corrections
-
-func camera_room_correction_x():
-	
-	var pos = (int(player_position.x /(36 *16))*576)
-	var field ="position:x"
-	
-	if cam_move_style_select == "dynamic" ||first_camera_correction == true :
-		camera_tween_transition(field,pos)
-		first_camera_correction = false
-
-
-
-	
-func camera_room_correction_y():
-	var pos = int(player_position.y + (22 *16))/(352)
-	var field ="position:y"
-	
+		0:
+			global_position.y -= scroll_speed * delta
+		1:
+			global_position.y += scroll_speed * delta
+		2:
+			global_position.x -= scroll_speed * delta
+		3:
+			global_position.x += scroll_speed * delta

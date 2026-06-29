@@ -440,6 +440,7 @@ tile_set = ExtResource("2_hvu0l")
 
 [node name="Camera2D" parent="." unique_id=285006430 instance=ExtResource("3_lra6s")]
 position = Vector2(2128, 0)
+enabled = false
 style_select = 0
 camera_smooth_speed = 1
 scroll_Speed = 60
@@ -449,9 +450,7 @@ position = Vector2(2378, 211)
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=620595876]
 process_mode = 3
-visible = false
 offset = Vector2(0, -16)
-enabled = false
 zoom = Vector2(2, 2)
 process_callback = 0
 position_smoothing_enabled = true
@@ -472,40 +471,40 @@ position = Vector2(-976, 2672)
 position = Vector2(0, -2344)
 
 [node name="ElevatorPlatform" parent="Elevator2" unique_id=1016378212 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -750)
+position = Vector2(0, -650)
 
 [node name="ElevatorPlatform2" parent="Elevator2" unique_id=1943121726 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -946)
+position = Vector2(0, -846)
 
 [node name="ElevatorPlatform3" parent="Elevator2" unique_id=814066312 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -1142)
+position = Vector2(0, -1042)
 
 [node name="ElevatorPlatform4" parent="Elevator2" unique_id=1231145623 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -1336)
+position = Vector2(0, -1236)
 
 [node name="ElevatorPlatform5" parent="Elevator2" unique_id=1291688643 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -1532)
+position = Vector2(0, -1432)
 
 [node name="ElevatorPlatform6" parent="Elevator2" unique_id=1678186410 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -1728)
+position = Vector2(0, -1628)
 
 [node name="ElevatorPlatform7" parent="Elevator2" unique_id=1101940001 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -1922)
+position = Vector2(0, -1822)
 
 [node name="ElevatorPlatform8" parent="Elevator2" unique_id=432724431 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -2118)
+position = Vector2(0, -2018)
 
 [node name="ElevatorPlatform9" parent="Elevator2" unique_id=2104132132 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -2314)
+position = Vector2(0, -2214)
 
 [node name="ElevatorPlatform10" parent="Elevator2" unique_id=1845711856 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -162)
+position = Vector2(0, -62)
 
 [node name="ElevatorPlatform11" parent="Elevator2" unique_id=1561018844 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -358)
+position = Vector2(0, -258)
 
 [node name="ElevatorPlatform12" parent="Elevator2" unique_id=1907036297 instance=ExtResource("7_c34ap")]
-position = Vector2(0, -554)
+position = Vector2(0, -454)
 
 [node name="ConveyorBelt" parent="." unique_id=435414731 instance=ExtResource("8_shscb")]
 z_index = -2
@@ -516,22 +515,22 @@ position = Vector2(304, 184)
 rotation_duration = 3.0
 
 [node name="Platform" parent="OrbitingPlatform" unique_id=2122479245 instance=ExtResource("10_oh7an")]
-position = Vector2(-64.27876, -76.60445)
+position = Vector2(99.02681, -13.91731)
 
 [node name="Platform_one_way_collision2" parent="OrbitingPlatform" unique_id=1225205754 instance=ExtResource("11_kn848")]
-position = Vector2(52.99193, -84.80481)
+position = Vector2(43.837116, 89.8794)
 script = SubResource("GDScript_lrol0")
 
 [node name="Platform_one_way_collision3" parent="OrbitingPlatform" unique_id=1407424563 instance=ExtResource("11_kn848")]
-position = Vector2(97.02957, 24.19219)
+position = Vector2(-71.93398, 69.465836)
 script = SubResource("GDScript_lrol0")
 
 [node name="Platform_one_way_collision4" parent="OrbitingPlatform" unique_id=139159527 instance=ExtResource("11_kn848")]
-position = Vector2(6.9756474, 99.75641)
+position = Vector2(-88.29476, -46.947155)
 script = SubResource("GDScript_lrol0")
 
 [node name="Platform_one_way_collision5" parent="OrbitingPlatform" unique_id=1231774542 instance=ExtResource("11_kn848")]
-position = Vector2(-92.71838, 37.46066)
+position = Vector2(17.364819, -98.480774)
 script = SubResource("GDScript_lrol0")
 
 [node name="OneWayPlatforms" type="Node2D" parent="." unique_id=1620288672]
@@ -670,6 +669,7 @@ scale = Vector2(1, 0.979167)
 curve = SubResource("Curve2D_7hwld")
 script = SubResource("GDScript_k7ebw")
 speed = 0.1
+direction = false
 
 [node name="MovingPlatform2" parent="MovingPlatforms" unique_id=1385898269 instance=ExtResource("23_reylm")]
 position = Vector2(-1608, -288)
@@ -705,6 +705,7 @@ position = Vector2(-1608, -288)
 curve = SubResource("Curve2D_782gx")
 script = SubResource("GDScript_655o8")
 speed = 0.1
+direction = false
 
 [node name="MovingPlatform7" parent="MovingPlatforms" unique_id=1145512755 instance=ExtResource("23_reylm")]
 position = Vector2(-1608, -288)

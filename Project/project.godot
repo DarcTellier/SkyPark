@@ -19,7 +19,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="SkyPark Adventures"
-run/main_scene="uid://cktjl7g16o17h"
+run/main_scene="uid://btnk1qlm1yc8q"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 

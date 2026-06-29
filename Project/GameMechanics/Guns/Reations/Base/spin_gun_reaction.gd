@@ -4,7 +4,9 @@ extends Node
 @export var spin_speed := 180.0
 
 var target: Node2D
+
 var spinning := false
+var stopped := false
 var direction := 1
 
 
@@ -13,10 +15,13 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if target == null:
+		return
+
 	if not spinning:
 		return
 
-	if target == null:
+	if stopped:
 		return
 
 	target.rotation_degrees += spin_speed * direction * delta
@@ -32,15 +37,24 @@ func react_to_gun(
 		return false
 
 	if mouse_button == MOUSE_BUTTON_LEFT:
-		spinning = true
-		direction = 1
+		start_spinning(-1)
 
 	if mouse_button == MOUSE_BUTTON_RIGHT:
-		spinning = true
-		direction = -1
+		start_spinning(1)
 
 	return true
 
 
+func start_spinning(new_direction: int) -> void:
+	spinning = true
+	stopped = false
+	direction = new_direction
+
+
 func stop_spinning() -> void:
-	spinning = false
+	stopped = true
+
+
+func resume_spinning() -> void:
+	if spinning:
+		stopped = false

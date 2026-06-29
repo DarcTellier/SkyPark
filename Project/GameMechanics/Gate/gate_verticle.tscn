@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c51o3g1b1387c"]
+
+[ext_resource type="Script" uid="uid://4s7j0h7kaeyt" path="res://GameMechanics/Gate/gate_verticle.gd" id="1_4rva0"]
+[ext_resource type="Texture2D" uid="uid://c6fywfjuqwdh7" path="res://Assets/Art/Bridge.png" id="2_o6k3g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_krim8"]
+size = Vector2(112, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rljeg"]
+size = Vector2(112, 16)
+
+[node name="Gate Verticle" type="Node2D" unique_id=2065488787]
+rotation = 1.5708
+script = ExtResource("1_4rva0")
+pause_when_fully_open = false
+pause_when_closed = false
+
+[node name="AGate" type="Node2D" parent="." unique_id=843482808]
+position = Vector2(-46, 0)
+
+[node name="Gate" type="Sprite2D" parent="AGate" unique_id=938004224]
+texture_filter = 1
+position = Vector2(-10, 0)
+texture = ExtResource("2_o6k3g")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AGate" unique_id=1142318284]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AGate/StaticBody2D" unique_id=1326668166]
+position = Vector2(-10, 0)
+shape = SubResource("RectangleShape2D_krim8")
+
+[node name="BGate" type="Node2D" parent="." unique_id=747108084]
+position = Vector2(56, 0)
+
+[node name="Gate" type="Sprite2D" parent="BGate" unique_id=395401629]
+texture_filter = 1
+scale = Vector2(1, -1)
+texture = ExtResource("2_o6k3g")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BGate" unique_id=927519019]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BGate/StaticBody2D" unique_id=1104935837]
+shape = SubResource("RectangleShape2D_rljeg")

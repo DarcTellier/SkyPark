@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://brkmoll3bdc80"]
+
+[ext_resource type="Script" uid="uid://cw8qqpn43pliy" path="res://GameMechanics/RTM/TimeBridge/draw_bridge.gd" id="1_ctp57"]
+[ext_resource type="Texture2D" uid="uid://ciywoxjw5gdap" path="res://Assets/Bridges/DrawBridge.png" id="2_ctp57"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2be5"]
+size = Vector2(208.00002, 16)
+
+[node name="DrawBridge" type="Node2D" unique_id=1442650988]
+script = ExtResource("1_ctp57")
+
+[node name="RightBridge" type="Node2D" parent="." unique_id=781783899]
+position = Vector2(224, 8)
+rotation = 1.5708
+scale = Vector2(-1, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RightBridge" unique_id=382951720]
+position = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightBridge/StaticBody2D" unique_id=1818978720]
+position = Vector2(104.00002, 8)
+shape = SubResource("RectangleShape2D_s2be5")
+
+[node name="Bridge2" type="Sprite2D" parent="RightBridge" unique_id=269666905]
+texture_filter = 1
+position = Vector2(104, -8.000305)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("2_ctp57")

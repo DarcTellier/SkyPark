@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://btodagme3g01l"]
+[gd_scene format=3 uid="uid://btodagme3g01l"]
 
 [ext_resource type="Script" uid="uid://rbygqrp6jbcx" path="res://GameMechanics/Special/super_elevator.gd" id="1_hvtdc"]
 
@@ -10,34 +10,47 @@ size = Vector2(48, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_in22v"]
 size = Vector2(48, 8)
 
-[node name="SuperElevator" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ra2i3"]
+size = Vector2(112, 8)
 
-[node name="SuperElevatorPlatform" type="AnimatableBody2D" parent="."]
+[node name="SuperElevator" type="Node2D" unique_id=81657232]
+metadata/_edit_vertical_guides_ = [-32.0, 48.0, 80.0]
+
+[node name="SuperElevatorPlatform" type="AnimatableBody2D" parent="." unique_id=604200841]
 script = ExtResource("1_hvtdc")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="SuperElevatorPlatform"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="SuperElevatorPlatform" unique_id=571103689]
 position = Vector2(24, 4)
 scale = Vector2(48, 8)
 mesh = SubResource("QuadMesh_hvtdc")
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="SuperElevatorPlatform"]
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="SuperElevatorPlatform" unique_id=371927619]
 position = Vector2(24.0882, -55.4064)
 scale = Vector2(-48.1567, 2.81271)
 mesh = SubResource("QuadMesh_hvtdc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SuperElevatorPlatform"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SuperElevatorPlatform" unique_id=317462413]
 position = Vector2(24, 4)
 shape = SubResource("RectangleShape2D_hvtdc")
+one_way_collision = true
 
-[node name="Area2D" type="Area2D" parent="SuperElevatorPlatform"]
+[node name="Area2D" type="Area2D" parent="SuperElevatorPlatform" unique_id=1839966524]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SuperElevatorPlatform/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SuperElevatorPlatform/Area2D" unique_id=1467544279]
 position = Vector2(24, -4)
 shape = SubResource("RectangleShape2D_in22v")
 
-[node name="MinHeight" type="Marker2D" parent="."]
+[node name="MinHeight" type="Marker2D" parent="." unique_id=513848693]
 
-[node name="MaxHeight" type="Marker2D" parent="."]
+[node name="MaxHeight" type="Marker2D" parent="." unique_id=1656577939]
+
+[node name="BaseArea" type="Area2D" parent="." unique_id=79652977]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea" unique_id=1904199941]
+position = Vector2(24, 4)
+shape = SubResource("RectangleShape2D_ra2i3")
 
 [connection signal="body_entered" from="SuperElevatorPlatform/Area2D" to="SuperElevatorPlatform" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="SuperElevatorPlatform/Area2D" to="SuperElevatorPlatform" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="BaseArea" to="SuperElevatorPlatform" method="_on_base_area_body_entered"]
+[connection signal="body_exited" from="BaseArea" to="SuperElevatorPlatform" method="_on_base_area_body_exited"]
