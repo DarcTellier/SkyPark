@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://btodagme3g01l"]
 
 [ext_resource type="Script" uid="uid://rbygqrp6jbcx" path="res://GameMechanics/Special/super_elevator.gd" id="1_hvtdc"]
+[ext_resource type="Texture2D" uid="uid://b10rwn5rassgo" path="res://Assets/SuperElevator/SuperElevator.png" id="2_s4wrf"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_hvtdc"]
 
@@ -20,11 +21,13 @@ metadata/_edit_vertical_guides_ = [-32.0, 48.0, 80.0]
 script = ExtResource("1_hvtdc")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="SuperElevatorPlatform" unique_id=571103689]
+visible = false
 position = Vector2(24, 4)
 scale = Vector2(48, 8)
 mesh = SubResource("QuadMesh_hvtdc")
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="SuperElevatorPlatform" unique_id=371927619]
+visible = false
 position = Vector2(24.0882, -55.4064)
 scale = Vector2(-48.1567, 2.81271)
 mesh = SubResource("QuadMesh_hvtdc")
@@ -39,6 +42,10 @@ one_way_collision = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SuperElevatorPlatform/Area2D" unique_id=1467544279]
 position = Vector2(24, -4)
 shape = SubResource("RectangleShape2D_in22v")
+
+[node name="Sprite2D" type="Sprite2D" parent="SuperElevatorPlatform" unique_id=1846383265]
+position = Vector2(24, -25)
+texture = ExtResource("2_s4wrf")
 
 [node name="MinHeight" type="Marker2D" parent="." unique_id=513848693]
 

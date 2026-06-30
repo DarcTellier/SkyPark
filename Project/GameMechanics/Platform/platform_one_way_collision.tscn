@@ -1,20 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwuaep5q40l2r"]
+[gd_scene format=3 uid="uid://dwuaep5q40l2r"]
 
-[ext_resource type="Texture2D" uid="uid://bcw08eqr5l11a" path="res://Assets/Art/Platform.png" id="1_4yxkx"]
 [ext_resource type="Script" uid="uid://n7cascalkffx" path="res://GameMechanics/Platform/platform_one_way_collision.gd" id="1_ufoom"]
+[ext_resource type="Texture2D" uid="uid://hnvcpbvv0auc" path="res://Assets/Art/Platform_1Way.png" id="2_m5bxy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smgmm"]
 size = Vector2(64, 16)
 
-[node name="Platform_one_way_collision" type="AnimatableBody2D" groups=["platforms"]]
-modulate = Color(0, 0.883333, 1, 1)
-position = Vector2(8, 0)
+[node name="Platform_one_way_collision" type="AnimatableBody2D" unique_id=1868461923 groups=["platforms"]]
 script = ExtResource("1_ufoom")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=708949223]
 shape = SubResource("RectangleShape2D_smgmm")
 one_way_collision = true
 
-[node name="Platform" type="Sprite2D" parent="."]
+[node name="Platform" type="Sprite2D" parent="." unique_id=539229472]
 texture_filter = 1
-texture = ExtResource("1_4yxkx")
+texture = ExtResource("2_m5bxy")

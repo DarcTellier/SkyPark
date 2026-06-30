@@ -36,10 +36,10 @@ position = Vector2(2592, 952)
 position = Vector2(0, -640)
 
 [node name="ElevatorPlatform" parent="Locations/ParkingLot/Elevator2" unique_id=1575876126 instance=ExtResource("3_42qrw")]
-position = Vector2(0, -296)
+position = Vector2(0, -442)
 
 [node name="ElevatorPlatform2" parent="Locations/ParkingLot/Elevator2" unique_id=1240076191 instance=ExtResource("3_42qrw")]
-position = Vector2(0, -616)
+position = Vector2(0, -120)
 
 [node name="platforms" type="Node2D" parent="Locations/ParkingLot" unique_id=1600283959]
 metadata/_edit_lock_ = true
@@ -155,25 +155,25 @@ return_when_player_near_base = false
 [node name="MaxHeight" parent="Locations/Tower/FLOOR 2/SuperElevator" index="2" unique_id=1656577939]
 position = Vector2(0, -223)
 
+[node name="Gate Verticle" parent="Locations/Tower/FLOOR 2" unique_id=2065488787 instance=ExtResource("8_fjvu3")]
+position = Vector2(2836, -112)
+gate_opening_size = 70.0
+transition_type = 1
+
+[node name="Gate Verticle2" parent="Locations/Tower/FLOOR 2" unique_id=1537915750 instance=ExtResource("8_fjvu3")]
+position = Vector2(3044, -112)
+gate_opening_size = 70.0
+transition_type = 1
+
 [node name="FLOOR 3" type="Node2D" parent="Locations/Tower" unique_id=570661841]
 
-[node name="Gate Verticle" parent="Locations/Tower" unique_id=2065488787 instance=ExtResource("8_fjvu3")]
-position = Vector2(3043, -162)
-gate_opening_size = 50.0
-transition_type = 9
-
-[node name="Gate Verticle2" parent="Locations/Tower" unique_id=1537915750 instance=ExtResource("8_fjvu3")]
-position = Vector2(3251, -162)
-gate_opening_size = 50.0
-transition_type = 9
-
 [node name="Camera2D" parent="." unique_id=254404086 instance=ExtResource("3_ar7kn")]
-position = Vector2(2890, -31701)
+position = Vector2(2890, -31654)
 room_height = 320.0
 style_select = 0
 
 [node name="Player" parent="." unique_id=1212657656 instance=ExtResource("2_84wht")]
-position = Vector2(3173, 234)
+position = Vector2(3173, 281)
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=600454150]
 process_mode = 3

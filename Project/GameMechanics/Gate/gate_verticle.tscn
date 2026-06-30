@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://c51o3g1b1387c"]
 
 [ext_resource type="Script" uid="uid://4s7j0h7kaeyt" path="res://GameMechanics/Gate/gate_verticle.gd" id="1_4rva0"]
-[ext_resource type="Texture2D" uid="uid://c6fywfjuqwdh7" path="res://Assets/Art/Bridge.png" id="2_o6k3g"]
+[ext_resource type="Texture2D" uid="uid://h7es3th87rfa" path="res://Assets/Platform/Gate_verticle.png" id="2_4rva0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krim8"]
-size = Vector2(112, 16)
+size = Vector2(80.000015, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rljeg"]
-size = Vector2(112, 16)
+size = Vector2(79.99999, 16)
 
 [node name="Gate Verticle" type="Node2D" unique_id=2065488787]
 rotation = 1.5708
@@ -20,13 +20,13 @@ position = Vector2(-46, 0)
 
 [node name="Gate" type="Sprite2D" parent="AGate" unique_id=938004224]
 texture_filter = 1
-position = Vector2(-10, 0)
-texture = ExtResource("2_o6k3g")
+position = Vector2(6, -5.9127808e-05)
+texture = ExtResource("2_4rva0")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="AGate" unique_id=1142318284]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AGate/StaticBody2D" unique_id=1326668166]
-position = Vector2(-10, 0)
+position = Vector2(5.9999924, 0)
 shape = SubResource("RectangleShape2D_krim8")
 
 [node name="BGate" type="Node2D" parent="." unique_id=747108084]
@@ -34,10 +34,12 @@ position = Vector2(56, 0)
 
 [node name="Gate" type="Sprite2D" parent="BGate" unique_id=395401629]
 texture_filter = 1
+position = Vector2(-16, -5.9127808e-05)
 scale = Vector2(1, -1)
-texture = ExtResource("2_o6k3g")
+texture = ExtResource("2_4rva0")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="BGate" unique_id=927519019]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BGate/StaticBody2D" unique_id=1104935837]
+position = Vector2(-16.000004, 0)
 shape = SubResource("RectangleShape2D_rljeg")
