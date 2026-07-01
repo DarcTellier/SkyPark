@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6gcmwqk40j7y"]
+[gd_scene format=3 uid="uid://b6gcmwqk40j7y"]
 
 [ext_resource type="Texture2D" uid="uid://bcw08eqr5l11a" path="res://Assets/Art/Platform.png" id="1_mtqs5"]
 
 [sub_resource type="Curve2D" id="Curve2D_foded"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 94, 0, 0, 0, 0, 0, 189, 0, 0, 0, 0, 0, 189, -314)
+}
+point_count = 4
 
 [sub_resource type="GDScript" id="GDScript_1ykav"]
 script/source = "@tool
@@ -54,25 +58,25 @@ func move_platform(delta):
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcyq1"]
 size = Vector2(64, 16)
 
-[node name="MovingPlatform" type="Path2D"]
+[node name="MovingPlatform" type="Path2D" unique_id=718415825]
 curve = SubResource("Curve2D_foded")
 script = SubResource("GDScript_1ykav")
 direction = true
 
-[node name="PathFollow2D" type="PathFollow2D" parent="."]
+[node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=1596613417]
 rotates = false
 loop = false
 
-[node name="AnimatableBody2D" type="AnimatableBody2D" parent="PathFollow2D"]
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="PathFollow2D" unique_id=318617623]
 sync_to_physics = false
 
-[node name="Platform" type="Sprite2D" parent="PathFollow2D/AnimatableBody2D"]
+[node name="Platform" type="Sprite2D" parent="PathFollow2D/AnimatableBody2D" unique_id=676218637]
 texture = ExtResource("1_mtqs5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/AnimatableBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/AnimatableBody2D" unique_id=1004856487]
 shape = SubResource("RectangleShape2D_mcyq1")
 
-[node name="Line2D" type="Line2D" parent="."]
+[node name="Line2D" type="Line2D" parent="." unique_id=358425780]
 z_index = -5
 width = 2.0
 default_color = Color(0, 0, 0, 1)
