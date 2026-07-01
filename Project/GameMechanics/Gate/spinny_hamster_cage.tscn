@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://xft44c0j7p0w"]
+
+[ext_resource type="Texture2D" uid="uid://8l7es6p07m0x" path="res://Assets/Art/Spinny Hamster cage.png" id="1_nkbmf"]
+[ext_resource type="Script" uid="uid://bl6vjep7hcodu" path="res://GameMechanics/Gate/spinny_hamster_cage.gd" id="1_texy5"]
+[ext_resource type="Texture2D" uid="uid://dqx4igyw0n5dt" path="res://Assets/Art/Spinny Hamster Door.png" id="2_texy5"]
+
+[node name="SpinnyHamsterCage" type="Node2D" unique_id=1793556522]
+script = ExtResource("1_texy5")
+
+[node name="SpinnyHamsterCage" type="Sprite2D" parent="." unique_id=1091439057]
+texture = ExtResource("1_nkbmf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SpinnyHamsterCage" unique_id=1734801837]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SpinnyHamsterCage/StaticBody2D" unique_id=581846688]
+polygon = PackedVector2Array(-16, -78, -16, -61, -17, -60, -20, -59, -23, -58, -28, -56, -33, -53, -37, -50, -42, -46, -45, -43, -49, -39, -53, -33, -56, -28, -58, -23, -60, -16, -78, -16, -78, -19, -76, -26, -74, -31, -70, -39, -67, -44, -65, -47, -62, -51, -52, -61, -51, -62, -47, -65, -41, -69, -35, -72, -31, -74, -29, -75, -26, -76, -23, -77, -19, -78)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="SpinnyHamsterCage" unique_id=2104423029]
+rotation = 1.5707964
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SpinnyHamsterCage/StaticBody2D2" unique_id=11675800]
+polygon = PackedVector2Array(-16, -78, -16, -61, -17, -60, -20, -59, -23, -58, -28, -56, -33, -53, -37, -50, -42, -46, -45, -43, -49, -39, -53, -33, -56, -28, -58, -23, -60, -16, -78, -16, -78, -19, -76, -26, -74, -31, -70, -39, -67, -44, -65, -47, -62, -51, -52, -61, -51, -62, -47, -65, -41, -69, -35, -72, -31, -74, -29, -75, -26, -76, -23, -77, -19, -78)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="SpinnyHamsterCage" unique_id=837659615]
+rotation = 3.1415927
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SpinnyHamsterCage/StaticBody2D3" unique_id=684364596]
+polygon = PackedVector2Array(-16, -78, -16, -61, -17, -60, -20, -59, -23, -58, -28, -56, -33, -53, -37, -50, -42, -46, -45, -43, -49, -39, -53, -33, -56, -28, -58, -23, -60, -16, -78, -16, -78, -19, -76, -26, -74, -31, -70, -39, -67, -44, -65, -47, -62, -51, -52, -61, -51, -62, -47, -65, -41, -69, -35, -72, -31, -74, -29, -75, -26, -76, -23, -77, -19, -78)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="SpinnyHamsterCage" unique_id=1029662562]
+rotation = 4.712389
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SpinnyHamsterCage/StaticBody2D4" unique_id=314312206]
+polygon = PackedVector2Array(-16, -78, -16, -61, -17, -60, -20, -59, -23, -58, -28, -56, -33, -53, -37, -50, -42, -46, -45, -43, -49, -39, -53, -33, -56, -28, -58, -23, -60, -16, -78, -16, -78, -19, -76, -26, -74, -31, -70, -39, -67, -44, -65, -47, -62, -51, -52, -61, -51, -62, -47, -65, -41, -69, -35, -72, -31, -74, -29, -75, -26, -76, -23, -77, -19, -78)
+
+[node name="SpinnyHamsterDoor" type="Sprite2D" parent="." unique_id=955489518]
+position = Vector2(0.5, 71)
+texture = ExtResource("2_texy5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SpinnyHamsterDoor" unique_id=2144951751]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SpinnyHamsterDoor/StaticBody2D" unique_id=1530895686]
+polygon = PackedVector2Array(-17.5, -9, -8.5, -9, -8.5, -8, 6.5, -8, 6.5, -9, 16.5, -9, 16.5, 8, 7.5, 8, 7.5, 9, -8.5, 9, -8.5, 8, -16.5, 8, -16.5, 6, -17.5, 6)
+
+[node name="SpinnyHamsterDoor2" type="Sprite2D" parent="." unique_id=1815133236]
+position = Vector2(-0.5, -71)
+texture = ExtResource("2_texy5")
+flip_h = true
+flip_v = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="SpinnyHamsterDoor2" unique_id=1864184147]
+position = Vector2(1, 0)
+rotation = 3.1415927
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SpinnyHamsterDoor2/StaticBody2D2" unique_id=541165931]
+polygon = PackedVector2Array(-17.5, -9, -8.5, -9, -8.5, -8, 6.5, -8, 6.5, -9, 16.5, -9, 16.5, 8, 7.5, 8, 7.5, 9, -8.5, 9, -8.5, 8, -16.5, 8, -16.5, 6, -17.5, 6)
+
+[node name="SpinnyHamsterDoor3" type="Sprite2D" parent="." unique_id=1443512273]
+position = Vector2(-71, -0.5)
+rotation = 1.5707964
+texture = ExtResource("2_texy5")
+flip_h = true
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="SpinnyHamsterDoor3" unique_id=1022665387]
+position = Vector2(0.99999994, 0)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SpinnyHamsterDoor3/StaticBody2D3" unique_id=165260426]
+polygon = PackedVector2Array(-17.5, -9, -8.5, -9, -8.5, -8, 6.5, -8, 6.5, -9, 16.5, -9, 16.5, 8, 7.5, 8, 7.5, 9, -8.5, 9, -8.5, 8, -16.5, 8, -16.5, 6, -17.5, 6)
+
+[node name="SpinnyHamsterDoor4" type="Sprite2D" parent="." unique_id=809901756]
+position = Vector2(71, 0.5)
+rotation = 1.5707964
+texture = ExtResource("2_texy5")
+flip_v = true
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="SpinnyHamsterDoor4" unique_id=1651370879]
+position = Vector2(-1, 0)
+rotation = 3.1415927
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SpinnyHamsterDoor4/StaticBody2D4" unique_id=1960456275]
+polygon = PackedVector2Array(-17.5, -9, -8.5, -9, -8.5, -8, 6.5, -8, 6.5, -9, 16.5, -9, 16.5, 8, 7.5, 8, 7.5, 9, -8.5, 9, -8.5, 8, -16.5, 8, -16.5, 6, -17.5, 6)
