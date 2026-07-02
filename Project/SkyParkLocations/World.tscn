@@ -43,10 +43,10 @@ position = Vector2(2592, 952)
 position = Vector2(0, -640)
 
 [node name="ElevatorPlatform" parent="Locations/ParkingLot/Elevator2" unique_id=1575876126 instance=ExtResource("3_42qrw")]
-position = Vector2(0, -550)
+position = Vector2(0, -638)
 
 [node name="ElevatorPlatform2" parent="Locations/ParkingLot/Elevator2" unique_id=1240076191 instance=ExtResource("3_42qrw")]
-position = Vector2(0, -228)
+position = Vector2(0, -316)
 
 [node name="platforms" type="Node2D" parent="Locations/ParkingLot" unique_id=1600283959]
 metadata/_edit_lock_ = true
@@ -136,7 +136,7 @@ metadata/_edit_lock_ = true
 position = Vector2(2944, 296)
 
 [node name="SuperElevatorPlatform" parent="Locations/Tower/FLOOR 1 Lobby/SuperElevator" index="0" unique_id=604200841]
-return_delay = 500.0
+return_delay = 5.0
 
 [node name="MaxHeight" parent="Locations/Tower/FLOOR 1 Lobby/SuperElevator" index="2" unique_id=1656577939]
 position = Vector2(0, -428)
@@ -157,7 +157,6 @@ position = Vector2(207, -50)
 position = Vector2(2913, -86)
 
 [node name="SuperElevatorPlatform" parent="Locations/Tower/FLOOR 2/SuperElevator" index="0" unique_id=604200841]
-return_to_ground = false
 return_delay = 5.0
 return_when_player_near_base = false
 
@@ -184,13 +183,13 @@ position = Vector2(3330, -412)
 radius = Vector2(75, 75)
 
 [node name="Platform" parent="Locations/Tower/FLOOR 3/OrbitingPlatform" unique_id=651331401 instance=ExtResource("9_45lny")]
-position = Vector2(75, -1.519878e-12)
+position = Vector2(56.774628, 49.006546)
 
 [node name="Platform2" parent="Locations/Tower/FLOOR 3/OrbitingPlatform" unique_id=2064870239 instance=ExtResource("9_45lny")]
-position = Vector2(-37.5, 64.951904)
+position = Vector2(-70.828224, 24.664999)
 
 [node name="Platform3" parent="Locations/Tower/FLOOR 3/OrbitingPlatform" unique_id=1096814700 instance=ExtResource("9_45lny")]
-position = Vector2(-37.5, -64.951904)
+position = Vector2(14.053598, -73.67155)
 
 [node name="DonutPlatform5" parent="Locations/Tower/FLOOR 3" unique_id=439724007 instance=ExtResource("20_sf6nx")]
 position = Vector2(3195, -467)
@@ -202,6 +201,11 @@ position = Vector2(3067, -515)
 position = Vector2(3091, -515)
 
 [node name="FLOOR 4" type="Node2D" parent="Locations/Tower" unique_id=689941978]
+
+[node name="MovingPlatform" parent="Locations/Tower/FLOOR 4" unique_id=1904566406 instance=ExtResource("15_xxdjo")]
+position = Vector2(3179, -662)
+speed = 0.15
+direction = false
 
 [node name="SpinnyHamsterCage" parent="Locations/Tower/FLOOR 4" unique_id=1793556522 instance=ExtResource("9_vrdn2")]
 position = Vector2(3055, -784)
@@ -221,16 +225,16 @@ rotate_degrees_per_cycle = 360.0
 transition_type = 2
 
 [node name="Platform_two_way_collision2" parent="Locations/Tower/FLOOR 4" unique_id=641601773 instance=ExtResource("10_o473l")]
-position = Vector2(2928, -713)
+position = Vector2(2928, -712)
 
 [node name="Platform_two_way_collision5" parent="Locations/Tower/FLOOR 4" unique_id=1610339454 instance=ExtResource("10_o473l")]
-position = Vector2(2928, -761)
+position = Vector2(2928, -760)
 
 [node name="Platform_two_way_collision6" parent="Locations/Tower/FLOOR 4" unique_id=1198498227 instance=ExtResource("10_o473l")]
-position = Vector2(2928, -809)
+position = Vector2(2928, -808)
 
 [node name="Platform_two_way_collision7" parent="Locations/Tower/FLOOR 4" unique_id=777562955 instance=ExtResource("10_o473l")]
-position = Vector2(2928, -857)
+position = Vector2(2928, -856)
 
 [node name="DownOneWayPlatform" parent="Locations/Tower/FLOOR 4" unique_id=408671654 instance=ExtResource("13_xr7k5")]
 position = Vector2(3080, -872)
@@ -269,12 +273,12 @@ position = Vector2(3208, -872)
 position = Vector2(3192, -872)
 
 [node name="Camera2D" parent="." unique_id=254404086 instance=ExtResource("3_ar7kn")]
-position = Vector2(2859, -32623)
+position = Vector2(3081, -31587)
 room_height = 320.0
 style_select = 0
 
 [node name="Player" parent="." unique_id=1212657656 instance=ExtResource("2_84wht")]
-position = Vector2(2922, -752)
+position = Vector2(3144, 284)
 cayote_Time = 0
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=600454150]
@@ -289,11 +293,6 @@ position_smoothing_speed = 10.0
 [node name="Gun" parent="." unique_id=2001587476 instance=ExtResource("3_bktvu")]
 guns = Array[ExtResource("4_om1jb")]([ExtResource("8_berqv"), ExtResource("5_4u434")])
 block_scene = ExtResource("6_om1jb")
-
-[node name="MovingPlatform" parent="." unique_id=1904566406 instance=ExtResource("15_xxdjo")]
-position = Vector2(3179, -662)
-speed = 0.15
-direction = false
 
 [editable path="Locations/ParkingLot/Elevator2"]
 [editable path="Locations/Tower/FLOOR 1 Lobby/SuperElevator"]
